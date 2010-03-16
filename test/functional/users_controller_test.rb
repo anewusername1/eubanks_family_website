@@ -2,7 +2,8 @@ require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
   # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "can access home page" do
+    get "/"
+    assert last_response.body.include?("Login")
   end
 end

@@ -1,162 +1,156 @@
-  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
-  [4;36;1mSQL (111.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
-  [4;35;1mSQL (100.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+# Logfile created on 2010-03-15 20:26:08 -0600  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (158.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (284.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
 Migrating to CreateUsers (20100308040321)
-  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255) NOT NULL, "crypted_password" varchar(255) NOT NULL, "password_salt" varchar(255) NOT NULL, "persistence_token" varchar(255) NOT NULL, "single_access_token" varchar(255) NOT NULL, "perishable_token" varchar(255) NOT NULL, "login_count" integer DEFAULT 0 NOT NULL, "failed_login_count" integer DEFAULT 0 NOT NULL, "last_request_at" datetime, "current_login_at" datetime, "last_login_at" datetime, "current_login_ip" varchar(255), "last_login_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
-  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100308040321')[0m
-  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
-  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
- FROM sqlite_master
- WHERE type = 'table' AND NOT name = 'sqlite_sequence'
-[0m
+  [4;36;1mSQL (104.4ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (40.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100308040321')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
   [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (197.9ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
-  [4;35;1mSQL (236.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
-  [4;35;1mSQL (1.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
-Migrating to CreateUsers (20100308040321)
-  [4;36;1mSQL (143.2ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
-  [4;35;1mSQL (64.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100308040321')[0m
-  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
-  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `users`[0m
-  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (201.5ms)[0m   [0;1mDROP DATABASE IF EXISTS `photo_album_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `photo_album_test` DEFAULT CHARACTER SET `utf8`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'john@doe.com\n') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'ef0bd307fdb4a512968bdb8ecd856adedc8df14e893805ff71325730205fe53b1062a49af35eb939d0f8f9f788de28c2b7cf523d1e228a7b52844e8bfc1c7043') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'm5zPfbOmmwAX_YXhtJ0t') LIMIT 1[0m
-  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (120.2ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (99.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (234.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100308040321')[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'john@doe.com') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'more_than_three_characters') LIMIT 1[0m
-  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'caf2bec610abf09cce9cccef54c11d0faf61c47567a2f68764e087af7ca5794793793de10772932c8834288bee5e03714756bdb0e700543c883a38061deb9211') LIMIT 1[0m
-  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'fNyLEyD_P4KFMupB7zGL') LIMIT 1[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'john@doe.com') LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'more_than_three_characters') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '04479637de31c819477781330f609efef94c66e09a7160c2d80bca336a0755ec8cb9abd4eb8349718357118ed8b979d2b89f54ff62374951d21ba542a3408d72') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'CtxJU3RHP8CB617U42P-') LIMIT 1[0m
-  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('CtxJU3RHP8CB617U42P-', NULL, '2010-03-12 23:57:00', 'd4fba788e2230dd159eca8c8c270433fda13baae2598584409bae5661d6ed0c170481294e09d9a360a3207eb8b53e59b1d7313da588a85e77891dc62c2e42e96', 'y0wua8VCGYuZncKkSwEa', '2010-03-12 23:57:00', 0, NULL, 'njK45CGgtCUcSA20pMZU', NULL, 'doe', '04479637de31c819477781330f609efef94c66e09a7160c2d80bca336a0755ec8cb9abd4eb8349718357118ed8b979d2b89f54ff62374951d21ba542a3408d72', 0, NULL, 'more_than_three_characters', NULL, 'john', 'john@doe.com')[0m
-  [4;36;1mSQL (60.6ms)[0m   [0;1mCOMMIT[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
-  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'john@doe.com') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'more_than_three_characters') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '223d990d4f7190e89ac4d9f2f8cfbd730b1af46dce3cfb9da382e437c11779bfab7ba6803d176f645907c3c77d8332a8704056d080340f76698142621acb3e13') LIMIT 1[0m
-  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'fjfpqjjlOPzV_qAAlAqz') LIMIT 1[0m
-  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
-  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'john@doe.com') LIMIT 1[0m
-  [4;35;1mUser Load (3.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'more_than_three_characters') LIMIT 1[0m
-  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '9a45b9c60d066632681929df6dde4c38dad6e4ab4425e821e736a88c9fd2ad1cbb4d543f1e8e618dd32c72b436f2dd91bbe13dadca2d83310148ceb1a03ae0e8') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'uFpKvfvrRHLT_MQAFDl7') LIMIT 1[0m
-  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'john@doe.com') LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'more_than_three_characters') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'cb21f6c0d4e3d401d9b9886987e60d1abe73ce7f70d866f98040a459667afc3b62858d33bbb9174e3d7f1e249cb2e8d18255daf5b08e0497090637c58cdded14') LIMIT 1[0m
-  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'mukBsWSjp399TeWmca-O') LIMIT 1[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (130.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `photo_album_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `photo_album_test` DEFAULT CHARACTER SET `utf8`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (104.1ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (99.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (242.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (47.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100308040321')[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'login_name2') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login_name1') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '5f7998e46bdd5d8992e7b2d6f71c8383ba24a70314e619beb9e06f0b2917887e197cbf0e4887bcf46613ef73ff00f82b9c95cf3ca5b346eb6e78fae33975a96d') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'H9c1R2tMT5SEVpGT02_u') LIMIT 1[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
-  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
-  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'login_name2') LIMIT 1[0m
-  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login_name1') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '394c389f054e775a65727e92a416e2e08acd221334e4fe4257849da31e4aa4aa04f02a17c772df3b4fcf23bcebcac4fe8ccd11358e97da42a017c10ccf7d9ec0') LIMIT 1[0m
-  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'Vyj9tsnZHNZdGvzVUnjU') LIMIT 1[0m
-  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'login_name2') LIMIT 1[0m
-  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login_name1') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'fb08fe64ee5427a70673ea857c083b71b834f233f07fb8080352ed385187d4a8fd45414fd0f70d0d29d88cda27740e214dd1bf51875f44238ee1d6ea49a05b69') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'GMi1yYr8qSTIHAnfnIE7') LIMIT 1[0m
-  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
-  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (106.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `photo_album_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `photo_album_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (108.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (217.6ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100308040321')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'one1@yahoo.com') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login1') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '77cc104f02b1e49dde861b9d0732b61f17a896b5460a73b8386fcf4c81506440cb5b50060c14651028d3cfb192bbead9da429a3a2e26ff8b8afaa1c968474fca') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'sp87L9r97ItPHVSA4GIX') LIMIT 1[0m
-  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('sp87L9r97ItPHVSA4GIX', NULL, '2010-03-13 00:07:02', 'ec3444d0e858529fcf69830fcd64965eb8d4174bc4784aa4d67f430f5b8176f4167896858293867e1fe099ad0b367f9ba0705c34fce4553ac327d417c054e950', '14L5NWkKaCXrJbbt-ajw', '2010-03-13 00:07:02', 0, NULL, '-6uGYaK-hcVn99F5s0Zj', NULL, 'doe', '77cc104f02b1e49dde861b9d0732b61f17a896b5460a73b8386fcf4c81506440cb5b50060c14651028d3cfb192bbead9da429a3a2e26ff8b8afaa1c968474fca', 0, NULL, 'login1', NULL, 'john', 'one1@yahoo.com')[0m
-  [4;36;1mSQL (85.9ms)[0m   [0;1mCOMMIT[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'one2@yahoo.com') LIMIT 1[0m
-  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login2') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '4d0145adbacd6ea3b88a9c8985932fc4479ac23bfa52fe9d7096abdfa3836bac39b4d1ec2a2f93ef26ab814493d7478103d7005156d2d314ec209a37a1e221f5') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY '5DM31KyDu7qMlbi97Fjp') LIMIT 1[0m
-  [4;36;1mUser Create (0.8ms)[0m   [0;1mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('5DM31KyDu7qMlbi97Fjp', NULL, '2010-03-13 00:07:05', '405331f9e63d181eb9600bbb18a720fe1cb707500aa174e8cbf582e75ed08cddd03bda09df8b5a58595dc9430566e8a10d271c8013ead70c6c06197c89f344be', 'Ob-vKAqU-goqEz-Yk6sC', '2010-03-13 00:07:05', 0, NULL, 'dX6-9tIawq2yiqitOpbY', NULL, 'doe', '4d0145adbacd6ea3b88a9c8985932fc4479ac23bfa52fe9d7096abdfa3836bac39b4d1ec2a2f93ef26ab814493d7478103d7005156d2d314ec209a37a1e221f5', 0, NULL, 'login2', NULL, 'john', 'one2@yahoo.com')[0m
-  [4;35;1mSQL (68.3ms)[0m   [0mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#/ (for 0.0.0.0 at 2010-03-15 20:47:20) [GET]
+  Parameters: {"action"=>"/", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (119.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `photo_album_test`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE DATABASE `photo_album_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (345.8ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (132.3ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (242.7ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (55.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100308040321')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'one3@yahoo.com') LIMIT 1[0m
-  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login3') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'babd97c33c153898c224dd33f5c6d51f4ef73b010394bdab601a89b4dbcf6f35dd760449c73548c1bb8cfd983a35ff81f84bc1b53178a8b92356d06874c28ce1') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'SVwa0tf8v-u9MuM82J5J') LIMIT 1[0m
-  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('SVwa0tf8v-u9MuM82J5J', NULL, '2010-03-13 00:07:06', 'eca96e28cb03f99e0f6067adf03c563d1cc0e5a486559ca0b13bdf90abdbfbe2b8e75b6a8a79e1b2cb7a0f46f0b07a9fb641e32eb1f7e2904cf81a9d60b37452', 'tLgCsfphDBMMWE2e7HQj', '2010-03-13 00:07:06', 0, NULL, 'ud6vswZdACdO0jdOpEeR', NULL, 'doe', 'babd97c33c153898c224dd33f5c6d51f4ef73b010394bdab601a89b4dbcf6f35dd760449c73548c1bb8cfd983a35ff81f84bc1b53178a8b92356d06874c28ce1', 0, NULL, 'login3', NULL, 'john', 'one3@yahoo.com')[0m
-  [4;36;1mSQL (61.3ms)[0m   [0;1mCOMMIT[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
-  [4;36;1mUser Load (1.9ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'one4@yahoo.com') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login4') LIMIT 1[0m
-  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'c72224d8685876575e581f23912bde48346550f21776c2e4568da75e16c8892a03ab69f6efc02171c52205e114738ab64c1dc307ba75d8c9f0b662d5a91eae9e') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'cV9JJs77Ne4K2RQMhcIf') LIMIT 1[0m
-  [4;36;1mUser Create (1.6ms)[0m   [0;1mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('cV9JJs77Ne4K2RQMhcIf', NULL, '2010-03-13 00:07:45', '5481bbf167c90d51d0852c5af0788cf7e9bb4e02b7a17ae3725606fe8b1c395e17075de4b113d3a3676fdecd63c80faf4e724e1b6df34ba0df87db37c7d12334', 'PuaEyqcQDeKSMwtZqVlD', '2010-03-13 00:07:45', 0, NULL, 'OOTUEap4dGFa8M857zw1', NULL, 'doe', 'c72224d8685876575e581f23912bde48346550f21776c2e4568da75e16c8892a03ab69f6efc02171c52205e114738ab64c1dc307ba75d8c9f0b662d5a91eae9e', 0, NULL, 'login4', NULL, 'john', 'one4@yahoo.com')[0m
-  [4;35;1mSQL (90.8ms)[0m   [0mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#/ (for 0.0.0.0 at 2010-03-15 20:51:50) [GET]
+  Parameters: {"action"=>"/", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (102.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `photo_album_test`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE DATABASE `photo_album_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (92.1ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (83.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (209.7ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (38.9ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100308040321')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'one5@yahoo.com') LIMIT 1[0m
-  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login5') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'e9031c91efa7a87bcef8339099951ab2766039f3e4f6a4050b70e2a60fba483eaf813cc0f146c7f5e110770359ed30af9f1280e47bdfae72a766046ee4740440') LIMIT 1[0m
-  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'FAWj9VBW3jZmPEsUxq6Q') LIMIT 1[0m
-  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('FAWj9VBW3jZmPEsUxq6Q', NULL, '2010-03-13 00:07:45', '627a6d2c57bc9d88c2bc89ad721bc30955e21a1b4d5386fe34fc736b7923e92059bf2bddfa9ae12ee66153e5aab25de4cd92d6b392d6a775c298544e87059d34', '3ybYNH_-9wqKHesoFUXn', '2010-03-13 00:07:45', 0, NULL, 'QgQX7Ned44mXAPAxonQX', NULL, 'doe', 'e9031c91efa7a87bcef8339099951ab2766039f3e4f6a4050b70e2a60fba483eaf813cc0f146c7f5e110770359ed30af9f1280e47bdfae72a766046ee4740440', 0, NULL, 'login5', NULL, 'john', 'one5@yahoo.com')[0m
-  [4;36;1mSQL (59.7ms)[0m   [0;1mCOMMIT[0m
-  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
-  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'one6@yahoo.com') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'login6') LIMIT 1[0m
-  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY 'b040819d7952b49a1348c1502c23515103d7151f7c6f82e83cc98bb59a9943f74b87f37304c0f558175ddc30273f4506aafd494c5aa49a02ada93c0591756510') LIMIT 1[0m
-  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'kTiEUN2BtB7Tiksy4FPU') LIMIT 1[0m
-  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO `users` (`single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `last_name`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `first_name`, `email`) VALUES('kTiEUN2BtB7Tiksy4FPU', NULL, '2010-03-13 00:07:45', 'b47e16000a9f7a1dd17cdb58e4a1ca6f36271425436f9a8628515aa31a1891a484ad95ca8a4b770a3dbb8efb023ece99b35cab3fc23e36230c1ccab46d62d931', 'BlvuFiy1I6GK1X-Ochp4', '2010-03-13 00:07:45', 0, NULL, 'rxq9EhLc5tznw77h8KjU', NULL, 'doe', 'b040819d7952b49a1348c1502c23515103d7151f7c6f82e83cc98bb59a9943f74b87f37304c0f558175ddc30273f4506aafd494c5aa49a02ada93c0591756510', 0, NULL, 'login6', NULL, 'john', 'one6@yahoo.com')[0m
-  [4;35;1mSQL (63.5ms)[0m   [0mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing UsersController#/ (for 0.0.0.0 at 2010-03-15 20:54:11) [GET]
+  Parameters: {"action"=>"/", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m

@@ -11,8 +11,7 @@
 
 ActiveRecord::Schema.define(:version => 20100308040321) do
 
-  create_table "users", :id => false, :force => true do |t|
-    t.integer  "id",                                 :null => false
+  create_table "users", :force => true do |t|
     t.string   "login",                              :null => false
     t.string   "first_name"
     t.string   "last_name"
