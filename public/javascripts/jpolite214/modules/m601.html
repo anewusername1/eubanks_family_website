@@ -1,0 +1,42 @@
+<p>An experimental RESTful data presentation layer, powered by Chain.js library.</p>
+
+<script>
+function test2(){
+	$.handleMessage({
+		resource:[
+			{name:'Products'},
+			{name:'Customers'}
+		]
+	});
+	return false;
+};
+</script>
+
+<button class="clear" onclick="test2()">Load Resources &amp; Show</button>
+
+<table>
+	<tr>
+		<td>
+			<h4>Products</h4>
+			<table class="span-8">
+				<thead>
+				<tr><td>Title</td><td>URL</td></tr>
+				</thead>
+				<tbody id="PRODUCT_LIST">
+				<tr><td class="title"></td><td class="url"></td></tr>
+				</tbody>
+			</table>
+		</td>
+		<td>
+			<h4>Customers</h4>
+			<table class="span-8">
+				<thead>
+				<tr><td>Title</td><td>URL</td></tr>
+				</thead>
+				<tbody id="CUSTOMER_LIST">
+				<tr><td class="title"></td><td class="url"></td></tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>

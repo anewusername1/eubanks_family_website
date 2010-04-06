@@ -1,0 +1,38 @@
+<h4>A Tale of Two JS Files</h4>
+<p>Two JavaScript files are provide to build a working JPolite system:</p>
+<ul>
+	<li><b>jpolite.core.js</b> - the abstract foundation of a tab-navigated portal framework, with internal data structures and methods.</li>
+	<li><b>jpolite.ext.js</b> - all the feature initialization and customization code.</li>
+</ul>
+<p>Normally you don't need to touch the core, customizing the ext part is (hopefully) enough to tailor JPolite for your needs.</p>
+
+<h4>Feature Customization</h4>
+<p>Here's a brief list of features you can customize in <b>jpolite.ext.js</b>:</p>
+<ul>
+	<li><b>Custom jQuery Plugins</b> - you can simple add them via <b>$.fn.extend</b>.</li>
+	<li><b>Live Event Handlers</b> - Simply call jquery function <b>live</b> to register you custom live event handlers. You can put all such
+	calls in function myLiveEvents for easier management.</li>
+	<li><b>Custom Events</b> - Simply call <b>$.bindEvent</b> to register a series of custom events and handlers into the JPolite system. Note
+	that $.bindEvent is a JPolite method which is used to register global events not applicable to specific DOM elements. For DOM elements,
+	please use jQuery's $.bind method instead. You can put all such calls in function <b>myCustomEvents</b>.</li>
+	<li><b>Message Handlers</b> - Message handlers are used to process server side messages sent in JSON format. This shall be a convenient
+	mechanism to build custom Ajax applications. More details can be found in <a href="#" class="tab" rel="t6">Messaging Tab</a></li>
+	<li><b>Custom Controls</b> - You need to register the selectors and initialization methods with arguments to make all control-specific HTML
+	segments dynamically loaded with modules into active controls. Simply add a line in function <b>myControls</b> and Voila, your custom controls
+	are activated. Further instructions can be found in <a href="modules/m406.html" class="local">module 406</a>.</li>
+	<li><b>Navigation Tab</b> - Last not least, the navigation tab is also customizable, further instructions in
+	<a href="modules/m501.html" class="local">module 501</a>.</li>
+</ul>
+
+<h4>JPolite2 Initialization Options</h4>
+<p>Here's a list of init arguments you can set when calling <b>$.jpolite.init</b>:</p>
+<ul>
+	<li><b>cts</b> - Navigation Tab container id, default = "#main_nav"</li>
+	<li><b>its</b> - Navigation Tab item selector, e.g., "dt" for a DL, default = "li"</li>
+	<li><b>t1</b> - Content transition Out callback when traversing between tabs, default = $.fn.fadeOut</li>
+	<li><b>t2</b> - Content transition In callback, default = $.fn.fadeIn</li>
+	<li><b>navInit</b> - Navigation Tab Initialization callback, default = TraditionalTabs</li>
+	<li><b>navInitArguments</b> - Navigation Tab Initialization parameters, default = {}</li>
+	<li><b>moduleSortable</b> - Whether to allow module drag-n-drop, default = true</li>
+	<li><b>layoutPersistence</b> - Methods to load/save layout of modules, default = [none, none]</li>
+</ul>

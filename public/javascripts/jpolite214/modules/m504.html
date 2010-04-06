@@ -1,0 +1,25 @@
+<p>Page background under a certain tab can be customized in <b>_columnLayout</b> variable in <b>modules.js</b>, e.g.,</p>
+<pre>
+	...
+	_default: { bg:'normal',
+	...
+	},
+	t2:{ bg:'darker',
+	...
+	},
+	...
+</pre>
+<p>The value '<b>normal</b>' and '<b>darker</b>' refers to two class names defined in <b>styles.css</b>. That is,
+you customize page background through the use of CSS classes, which can use both colors and images</p>
+
+<h4>Known Issues</h4>
+<p class="notice">Currently JPolite2 makes use of jQuery UI's <b>switchClass</b> function to make a smooth transition
+between different background settings. But this feature does not work under WebKit based browsers, i.e., Google Chrome
+& Apple Safari. Even worse, the background stay unchanged between tabs.
+</p>
+
+<p>So far there seems no sound solution yet that you need to make a decision here:</p>
+<ol>
+	<li>Forget about transition, use plain attr("class", "new_class_name") to achieve maximum compatibility.</li>
+	<li>Forget about WebKit, make switchClass a special treat for non-WebKit browsers.</li>	
+</ol>
