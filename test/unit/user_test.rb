@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  def user_create_should_work_valid_parms
+    assert_difference('User.count') do 
+      Factory.create(:user)
+    end
+    
+    assert_redirected_to user_path
   end
 end

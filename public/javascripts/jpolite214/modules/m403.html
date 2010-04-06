@@ -1,0 +1,17 @@
+<p>A Local Link is one that changes the content of its parent module only</p>
+<pre>
+&lt;a href='modules/m502.html' class='local'&gt;m502&lt;/a&gt;
+&lt;a href='modules/m503.html' class='local'&gt;m503&lt;/a&gt;
+</pre>
+
+<p>
+	Go to module <a href="modules/m401.html" class="local">Tabs Control</a><br/>
+	Go to module <a href="modules/m402.html" class="local">Accordion Control</a>
+</p>
+
+<p>Just add a <b>class="local"</b> attribute and it will work.</p>
+
+<p>Web pages normally don't need this feature, but when loaded as a module under JPolite, links without the "local" mark will affect the entire page by default.</p>
+
+<p class="notice">A local link only switches the content of its parent module into another's, thus a refresh will revert the original content.</p>
+<p class="notice">External links, e.g., href=http://xyz.com/abc.html, will open a new window or tab by default in JPolite.</p>

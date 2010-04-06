@@ -1,0 +1,16 @@
+<h4>About jQuery User Interface Plugins</h4>
+<p>Currently there some <a href="http://plugins.jquery.com/project/Plugins/category/21">500+ UI plugins</a> available for jQuery based systems. To integrate those you like into JPolite, you need to do the following:</p>
+<ol>
+	<li>Download plugin JS file (and necessary supporting stuff) and include it in index.html, before <b>jpolite.ext.js</b></li>
+	<li>Call $.addControls({selector:[$.fn.myPluginFunction, {optional:init_arguments}]}), you can find examples in function <b>myControls</b> in <b>jpolite.ext.js</b></li>
+	<li>Include HTML sections pre-formatted according to plugin requirements into a module and test if it works</li>
+</ol>
+
+<p>Step 2 seems a bit more complex, that's because modules in JPolite are loaded through the "lazy-loading" mechanism
+that one-time initialization (usually done in $(function(){...})) can notcover controls to be loaded in the future.</p>
+<p>So JPolite2 introduces a control registry, which can be accessed via $.addControls. All registered controls' initialization
+methods  will be automatically called upon each and every newly loaded module (or newly generated content).</p>
+
+<p class='notice'>Try to use <b>class selector</b> all the time, since a type of control may appear many times in many modules.</p>
+
+<p class='error'>Beware that some plugins only support one-time initialization, that later calls on new content would not work.</p>

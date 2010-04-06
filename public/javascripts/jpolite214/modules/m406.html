@@ -1,0 +1,32 @@
+<p>Below is the example flow to integrate the <a href="http://dev.iceburg.net/jquery/jqModal/">jqDialog</a> plugin</p>
+<ol>
+	<li>First download jqModal.js and supporting CSS, and include them into index.html</li>
+	<li>Initialization code in jpolite.ext.js
+<pre>
+$.addControl({
+	...
+	".jqmWindow":	[$.fn.jqm, {toTop:true}],
+	...
+});
+</pre>
+	</li>
+	<li>Sample HTML segment within this module
+<pre>
+&lt;div class="jqmWindow" id="test1"&gt;
+	&lt;h4 class='success'&gt;A sample jqModal is shown!&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class="jqmWindow" id="test2"&gt;
+	&lt;h4 class='notice'&gt;Another jqModal is here!&lt;/h4&gt;
+&lt;/div&gt;
+</pre>
+	</li>
+</ol>
+
+<div class="jqmWindow" id="test1">
+<h4 class='success'>A sample jqModal is shown!</h4>
+</div>
+<div class="jqmWindow" id="test2">
+<h4 class='notice'>Another jqModal is here!</h4>
+</div>
+<a href="#" onclick="$('#test1').jqmShow();return false">Show Dialog 1</a> |
+<a href="#" onclick="$('#test2').jqmShow();return false">Show Dialog 2</a>

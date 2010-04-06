@@ -1,0 +1,27 @@
+<p style="text-align:center"><img src="img/prog_model.png"/></p>
+
+<h4>Single Page Application</h4>
+<p>JPolite is essentially a SPA that interacts with server through AJAX.</p>
+
+<h4>XDO (XML Data Objects) Layer</h4>
+<p>Handles requests to server side resources as well as presentation on proper controls in modules. Local data cache is provided to improve user
+response time and to save duplicate requests to server.</p>
+<p>XDO is designed upon the REST Architecture Style that requires hyperlinks in resource representations (JSON data) in order to discover further
+resources. The core can work with various RESTful resource sets as long as they are hyperlinked with each together. Developers only need to work
+on a customization part, which defines where and how the data should be presented. A same resource can be displayed on the page in </p>
+<p class="notice">Currently, XDO handles data in JSON format only. Support for XML will be considered upon requests.</p>
+
+<h4>Thin Server Architecture</h4>
+<ul>
+	<li>A Web server like Apache that handles requests to static resources, like html, js, css and image files.</li>
+	<li>An Application server that handles requests to dynamic resources via server-side scripts, PHP, Java, Python, Rails ...
+	and outputs with <b>ONLY data</b> in and <b>ZERO HTML</b>. That is, the server is not responsible for the presentation of data,
+	thus its logic becomes simpler and more focused, and is therefore called a "thin server"</li>
+</ul>
+
+<h4>XDO + Thin Server Programming Model</h4>
+<p>By combining XDO and Thin Server Architecture, we can literally decouple <b>data production</b> and <b>representation</b>, as well as
+<b>user experience</b> and <b>server technology</b>. Since user experience is solely defined at front-end, while the server is responsible for
+providing data only. And we can switch between or combine together various server technologies, Java, PHP, Rails, while still maintaining a
+consistent user experience.</p>
+<p>Request to resources is defined at module level, but may affect controls across multiple modules.</p>

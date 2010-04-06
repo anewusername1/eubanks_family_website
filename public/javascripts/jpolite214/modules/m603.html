@@ -1,0 +1,37 @@
+<a class='refresh' rev='Products'></a><a class='refresh' rev='Customers'></a>
+
+<p>Note the resource table is automatically filled with a resource trigger hidden in this page.</p>
+<pre>
+	&lt;a class='refresh' rev='Products'&gt;&lt;/a&gt;
+	&lt;a class='refresh' rev='Customers'&gt;&lt;/a&gt;
+</pre>
+
+<p>When a module is loaded, the loader will try to scan all <b>a.refresh</b> elements and generate a click event on each.
+The click handler will inspect the anchor's <b>rev</b> attribute and load resources accordingly.</p>
+
+<table>
+	<tr>
+		<td>
+			<h3>Products</h3>
+			<table class="span-8">
+				<thead>
+				<tr><td>Title</td><td>URL</td></tr>
+				</thead>
+				<tbody id="PRODUCT_LIST">
+				<tr><td class="title"></td><td class="url"></td></tr>
+				</tbody>
+			</table>
+		</td>
+		<td>
+			<h3>Customers</h3>
+			<table class="span-8">
+				<thead>
+				<tr><td>Title</td><td>URL</td></tr>
+				</thead>
+				<tbody id="CUSTOMER_LIST">
+				<tr><td class="title"></td><td class="url"></td></tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>

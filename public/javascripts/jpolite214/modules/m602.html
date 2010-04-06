@@ -1,0 +1,22 @@
+<p>A message registry and processing mechanism to handle messages from server side.</p>
+<script>
+function test1(){
+	$.handleMessage({
+		error:'too bad!',
+		msg: 'haha',
+		notice:[['name','too short']]
+	});
+	return false;
+};
+</script>
+<form class="jsonform"><fieldset><legend>Form</legend>
+	<p>This is an empty form for server message testing. Sample message body:</p>
+	<pre>
+	{
+		error:'too bad!',
+		msg: 'haha',
+		notice:[['name','too short']]
+	}
+	</pre>
+	<button onclick="return test1()">Simulate a Server Message</button>
+</fieldset></form>

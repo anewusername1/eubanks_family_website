@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>JPolite V2.14</title>
+<meta name="keywords" content="jquery,portal,lightweight,ui,javascript"/>
+<meta name="description" content="JPolite is a lightweight portal framework based on jQuery with strong customization features."/>
+<meta name="author" content="http://trilancer.wordpress.com/"/>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.gritter.css"/>
+<link rel="stylesheet" type="text/css" href="css/jqModal.css"/>
+<link rel="alternate stylesheet" title="classic" href="css/style0.css" type="text/css" media="screen"/>
+<link rel="alternate stylesheet" title="silver" href="css/style.css" type="text/css" media="screen"/>
+<link rel="stylesheet" title="modern" href="css/style1.css" type="text/css" media="screen"/>
+<!-- Sample jQuery UI Theme CSS file from http://jqueryui.com/themeroller/ -->
+<link rel="stylesheet" type="text/css" href="css/start/jquery-ui-1.7.2.custom.css" media="screen"/>
+<!--[if IE]>
+	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen"/>
+<![endif]-->
+</head>
+<body class='normal'>
+<div id="header">
+	<div id="logo"></div>
+	<div id="title">A Lightweight Portal Framework based on jQuery</div>
+	<ul id="main_nav">
+		<li id="t1"><b class="hover">About V2</b>About V2</li>
+		<li id="t2"><b class="hover">Layout</b><span>Layout</span><dl><dd id="t21">Same content, another layout</dd></dl></li>
+		<li id="t3"><b class="hover">Module</b>Module</li>
+		<li id="t4"><b class="hover">Controls</b><span>Controls</span><dl><dd id="t41">Tabs &amp; Accordion</dd><dd id="t42">jQuery UI with Theme</dd></dl></li>
+		<li id="t5"><b class="hover">Customize</b>Customize</li>
+		<li id="t6"><b class="hover">XDO</b><span>XDO</span><dl><dd id="t61">Programming Model</dd></dl></li>
+		<li id="t8"><b class="hover">Download</b>Download</li>
+	</ul>
+	<div id="info_bar">
+		<b id="loading"></b><b id="menu_btn"></b><i class="left hint">Module menu</i>
+		<i class="right">
+			<b id="maxAll" title="Expand All Modules"></b>
+			<b id="minAll" title="Collapse All Modules"></b>
+		</i>
+		<i class="hint right">Adjust module appearance</i>
+	</div>
+</div>
+
+<div id="content" class="container">
+	<div id="module_menu" class="jqmWindow"></div>
+	<div id="c1" class="cc"></div>
+	<div id="c2" class="cc"></div>
+	<div id="c3" class="cc"></div>
+	<div id="c4" class="cc">
+		<div class="module blue" id="m104:t1">
+			<div class="moduleFrame">
+				<div class='moduleHeader'>
+					<div class='moduleTitle'>Key New Features</div>
+					<div class='moduleActions'>
+						<b title="Collapse" class="actionMin"></b>
+						<b title="Expand" class="actionMax"></b>
+						<b title="Close" class="actionClose"></b>
+					</div>
+				</div>
+				<div class='moduleContent'>
+					<h4>SEO Support</h4>
+					<p>Note this module is a static one pre-loaded in <b>index.html</b>, which is visible to search engines.</p>
+					<script type="text/javascript">
+						function switchTheme(t) {
+							$('link[title]','head').each(function(){
+								this.disabled = true;
+								this.disabled = (this.title != t); 
+							});
+							return false;
+						};
+					</script>
+					<fieldset><legend>Live Theme Switcher</legend>
+						<p>
+						<button onclick="switchTheme('modern')"><img style="width:126px;height:66px" src="img/t1.png" alt="Modern"/></button>
+						<button onclick="switchTheme('silver')"><img style="width:126px;height:66px" src="img/t2.png" alt="Silver"/></button>
+						<button onclick="switchTheme('classic')"><img style="width:126px;height:66px" src="img/t3.png" alt="Classic"/></button>
+						</p>
+					</fieldset>
+					<div class="span-11">
+						<h4>Layout Persistence</h4>
+						<p>Module layout can be stored and retrieved to your selected store.</p>
+						<button onclick="$.cookie('jpolite2layout',null)">Reset Layout</button>
+						<p class="clear">Any drag-n-drop operation will trigger save layout. To resume the original layout, press above button then refresh.</p>						
+					</div>
+					<div class="span-11 last">
+						<h4>Popup &amp; Dropdown Menu</h4>
+						<p>A module popup menu is provided for users to add modules to current tab.</p>
+						<button onclick="$('#menu_btn').click()">Show Module Menu</button>
+						<p class="clear">Dropdown menu is now supported which provides additional navigation support in addition to horizontal tabs.</p>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+<div id="footer_bar"><a href="http://trilancer.wordpress.com/">Trilancer Blog</a> | <a href="http://www.jquery.com">About jQuery</a> | <a href="http://www.netvibes.com">About Netvibes</a></div>
+Copyright 2009 (C) Trilancer.com
+</div>
+
+<!-- A series of hidden module templates carried within the page, which can be modified easily -->
+<div class="module_template"><!-- A default template is required here without an ID -->
+	<div class="moduleFrame">
+		<div class='moduleHeader'>
+			<div class='moduleTitle'></div>
+			<div class='moduleActions'>
+				<b title="Refresh" class="actionRefresh"></b>
+				<b title="Collapse" class="actionMin"></b>
+				<b title="Expand" class="actionMax"></b>
+				<b title="Close" class="actionClose"></b>
+			</div>
+		</div>
+		<div class='moduleContent'>
+			<img src="img/loading.gif" alt="Loading..."/> Loading...
+		</div>
+	</div>
+</div>
+<div class="module_template" id="B"><!-- The ID 'B' will be used as the index to match all module layout definition with mt:'B' -->
+	<div class="moduleFrame" style="border:6px groove red">
+		<div class='moduleContent' style="background:#ffc">
+			<img src="img/loading.gif" alt="Loading..."/> Loading...
+		</div>
+		<div class='moduleHeader'>
+			<div class='moduleTitle'></div>
+			<div class='moduleActions'>
+				<b title="Collapse" class="actionMin"></b>
+				<b title="Expand" class="actionMax"></b>
+				<b title="Close" class="actionClose"></b>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="module_template" id="C"><!-- The ID 'C' will be used as the index to match all module layout definition with mt:'C' -->
+	<div class="moduleFrame" style="border:6px double green">
+		<div class='moduleContent' style="background:#cff">
+			<img src="img/loading.gif" alt="Loading..."/> Loading...
+		</div>
+		<div class='moduleHeader'>
+			<div class='moduleTitle'></div>
+			<div class='moduleActions'>
+				<b title="Collapse" class="actionMin"></b>
+				<b title="Expand" class="actionMax"></b>
+				<b title="Close" class="actionClose"></b>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="js/modules.js"></script>
+<script type="text/javascript" src="js/jquery.gritter.js"></script>
+<script type="text/javascript" src="js/chain-0.2.pack.js"></script>
+<script type="text/javascript" src="js/jquery.kwicks-1.5.1.pack.js"></script>
+<script type="text/javascript" src="js/jquery.lavalamp.1.3.2-min.js"></script>
+<script type="text/javascript" src="js/jqModal.js"></script>
+<script type="text/javascript" src="js/jpolite.core.js"></script>
+<script type="text/javascript" src="js/xdo.core.js"></script>
+<script type="text/javascript" src="js/xdo.data.js"></script>
+<script type="text/javascript" src="js/jpolite.ext.js"></script>
+</body>
+</html>
