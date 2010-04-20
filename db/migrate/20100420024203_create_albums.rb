@@ -2,8 +2,8 @@ class CreateAlbums < ActiveRecord::Migration
   def self.up
     create_table :albums do |t|
       t.string 		:album_name,		:null => false
-      t.boolean		:public_private,	:null => false
-      t.user_id		:integer,		:null => false
+      t.string		:scope #		:limit => [:public, :private, :mixed]
+      t.integer         :user_id,		:null => false
       t.timestamps
     end
   end
