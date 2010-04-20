@@ -5,7 +5,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= controller.controller_name %>: <%= controller.action_name %></title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<link type="text/css" href="<%=RAILS_ROOT%>/public/stylesheets/themes/smoothness/jquery-ui-1.8.custom.css" />
 	<% if protect_against_forgery? %>
 	  <script type='text/javascript'>
 	      //<![CDATA[
@@ -17,6 +18,7 @@
 	<%= javascript_include_tag 'application' %>
 </head>
 <body>
+<div class="ui-widget">
  
  
 <% if !current_user %>
@@ -30,7 +32,11 @@
 <p style="color: green"><%= flash[:notice] %></p>
  
 <%= yield %>
- 
+<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<strong>Hey!</strong> Sample ui-state-highlight style.</p>
+			</div>
+</div>
 </body>
 </html>
  
