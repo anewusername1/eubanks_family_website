@@ -6,7 +6,8 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title><%= controller.controller_name %>: <%= controller.action_name %></title>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<link type="text/css" href="<%=RAILS_ROOT%>/public/stylesheets/themes/smoothness/jquery-ui-1.8.custom.css" />
+	<%= stylesheet_link_tag "themes/smoothness/jquery-ui-1.8.custom.css" %>
+	<script type="text/javascript" src="/javascripts/jquery-ui-1.8.custom/js/jquery-ui-1.8.custom.min.js"></script>
 	<% if protect_against_forgery? %>
 	  <script type='text/javascript'>
 	      //<![CDATA[
@@ -32,10 +33,7 @@
 <p style="color: green"><%= flash[:notice] %></p>
  
 <%= yield %>
-<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;"> 
-				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
-				<strong>Hey!</strong> Sample ui-state-highlight style.</p>
-			</div>
+
 </div>
 </body>
 </html>
