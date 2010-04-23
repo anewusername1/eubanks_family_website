@@ -9,7 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100308040321) do
+ActiveRecord::Schema.define(:version => 20100420032141) do
+
+  create_table "albums", :force => true do |t|
+    t.string   "album_name", :null => false
+    t.string   "scope"
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.text     "tags"
+    t.string   "caption",                           :null => false
+    t.string   "scope",      :default => "private"
+    t.string   "photo_path",                        :null => false
+    t.integer  "album_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login",                              :null => false
