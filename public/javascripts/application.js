@@ -123,14 +123,18 @@ function ajaxLinks(){
 $(document).ready(function() {
 // All non-GET requests will add the authenticity token
  $(document).ajaxSend(function(event, request, settings) {
-       if (typeof(window.AUTH_TOKEN) == "undefined") return;
-       // IE6 fix for http://dev.jquery.com/ticket/3155
-       if (settings.type == 'GET' || settings.type == 'get') return;
+    if (typeof(window.AUTH_TOKEN) == "undefined") return;
+    // IE6 fix for http://dev.jquery.com/ticket/3155
+    if (settings.type == 'GET' || settings.type == 'get') return;
  
-       settings.data = settings.data || "";
-       settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(window.AUTH_TOKEN);
-     });
- 
+    settings.data = settings.data || "";
+    settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(window.AUTH_TOKEN);
+    
+  });
   ajaxLinks();
 });
 
+$(function(){
+  $("button, input:submit, a", ".ui-form_box").button();
+  $("a", "ui-form_box").click(function(){ return false; });
+});
