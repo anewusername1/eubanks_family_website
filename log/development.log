@@ -952,3 +952,1961 @@ Processing UsersController#show (for 127.0.0.1 at 2010-04-05 21:20:52) [GET]
 Rendering template within layouts/application
 Rendering users/show
 Completed in 96ms (View: 25, DB: 45) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (69.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (99.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (29.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (288.3ms)[0m   [0mCREATE TABLE `albums` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `album_name` varchar(255) NOT NULL, `public_private` tinyint(1) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (92.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420024203')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (30.4ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (11.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mAlbum Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'albums.user_id' in 'where clause': SELECT * FROM `albums` WHERE (`albums`.user_id = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (132.5ms)[0m   [0mDROP TABLE `albums`[0m
+  [4;36;1mSQL (122.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100420024203'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (150.5ms)[0m   [0mCREATE TABLE `albums` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `album_name` varchar(255) NOT NULL, `public_private` tinyint(1) NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420024203')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mAlbum Load (1.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.user_id = 1) [0m
+  [4;36;1mAlbum Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (0.0ms)[0m   [0;1mMysql::Error: Column 'user_id' cannot be null: INSERT INTO `albums` (`album_name`, `public_private`, `user_id`, `created_at`, `updated_at`) VALUES('my_album', 1, NULL, '2010-04-20 03:02:48', '2010-04-20 03:02:48')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAlbum Create (19.0ms)[0m   [0mINSERT INTO `albums` (`album_name`, `public_private`, `user_id`, `created_at`, `updated_at`) VALUES('my_album', 1, 1, '2010-04-20 03:11:43', '2010-04-20 03:11:43')[0m
+  [4;36;1mSQL (59.9ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (98.0ms)[0m   [0mDROP TABLE `albums`[0m
+  [4;36;1mSQL (52.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100420024203'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGIN' at line 1: CREATE TABLE `albums` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `album_name` varchar(255) NOT NULL, `scope` enum, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (136.3ms)[0m   [0mCREATE TABLE `albums` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `album_name` varchar(255) NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (52.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420024203')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (10.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (58.1ms)[0m   [0mDROP TABLE `albums`[0m
+  [4;36;1mSQL (49.6ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100420024203'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+  [4;35;1mSQL (150.0ms)[0m   [0mCREATE TABLE `albums` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `album_name` varchar(255) NOT NULL, `scope` varchar(255), `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (63.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420024203')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (14.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAlbum Create (0.7ms)[0m   [0mINSERT INTO `albums` (`album_name`, `scope`, `user_id`, `created_at`, `updated_at`) VALUES('my_album', '--- :mixed\n', 1, '2010-04-20 03:18:46', '2010-04-20 03:18:46')[0m
+  [4;36;1mSQL (52.6ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+Migrating to CreatePhotos (20100420032141)
+  [4;35;1mSQL (103.5ms)[0m   [0mCREATE TABLE `photos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tags` text, `caption` varchar(255) NOT NULL, `scope` varchar(255) DEFAULT 'private', `album_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (49.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420032141')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (10.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `photos`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `photos`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPhoto Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mAlbum Load (0.5ms)[0m   [0mSELECT * FROM `albums` LIMIT 1[0m
+  [4;36;1mAlbum Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mPhoto Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (14.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO `photos` (`tags`, `caption`, `scope`, `album_id`, `created_at`, `updated_at`) VALUES('one,great,big,photo', 'your momma', 'private', 1, '2010-04-20 03:27:14', '2010-04-20 03:27:14')[0m
+  [4;36;1mSQL (45.9ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20100420032141)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhotos (20100420032141)
+  [4;35;1mSQL (63.4ms)[0m   [0mDROP TABLE `photos`[0m
+  [4;36;1mSQL (49.6ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100420032141'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100308040321)
+Migrating to CreateAlbums (20100420024203)
+Migrating to CreatePhotos (20100420032141)
+  [4;35;1mSQL (155.4ms)[0m   [0mCREATE TABLE `photos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tags` text, `caption` varchar(255) NOT NULL, `scope` varchar(255) DEFAULT 'private', `photo_path` varchar(255) NOT NULL, `album_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100420032141')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `photos`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `photos`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (37.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 09:57:53) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (24.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 09:58:34) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+
+ActionView::MissingTemplate (Missing template albums/index.erb in view path app/views):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:05:02) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mUser Columns (142.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 332ms (View: 187, DB: 142) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:07:31) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (21.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 42ms (DB: 22) | 302 Found [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 10:07:31) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 50ms (View: 23, DB: 2) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 10:08:53) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (11.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'narshlob') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 45ms (View: 7, DB: 14) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 10:09:01) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'narshlob') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/user_session]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 10:09:09) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'narshlob') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 10:10:03) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 48ms (View: 7, DB: 4) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-22 10:10:07) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (2.4ms)
+Completed in 74ms (View: 49, DB: 3) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-22 10:10:27) [POST]
+  Parameters: {"user"=>{"email"=>"yourmom@whatever.com", "login"=>"narshlob", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (13.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'yourmom@whatever.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'narshlob') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'yG9cj81WChU2vyLO_JYi') LIMIT 1[0m
+  [4;36;1mUser Create (33.7ms)[0m   [0;1mINSERT INTO `users` (`login`, `first_name`, `last_name`, `email`, `crypted_password`, `password_salt`, `persistence_token`, `single_access_token`, `perishable_token`, `login_count`, `failed_login_count`, `last_request_at`, `current_login_at`, `last_login_at`, `current_login_ip`, `last_login_ip`, `created_at`, `updated_at`) VALUES('narshlob', NULL, NULL, 'yourmom@whatever.com', '0b9d8cbfd75b04471ac006bad8f725e12f96301050db049988582ffbad6111e36a411fe7876be997d097dd853682165f74003b06e09e95b634c87f1cfd180319', '-BKljt5OAvmGkOv8yGGA', '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532', 'yG9cj81WChU2vyLO_JYi', 'Vpq5KmG6qsbEHUMX6K9o', 1, 0, '2010-05-22 16:10:27', '2010-05-22 16:10:27', NULL, '127.0.0.1', NULL, '2010-05-22 16:10:27', '2010-05-22 16:10:27')[0m
+  [4;35;1mSQL (68.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/albums
+Completed in 358ms (DB: 119) | 302 Found [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:10:27) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (2.9ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:10:27', `perishable_token` = 'tYBUZfBz2fCNlDaYI1nu', `updated_at` = '2010-05-22 16:10:27' WHERE `id` = 2[0m
+  [4;35;1mSQL (48.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 79ms (View: 3, DB: 53) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:10:31) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:10:31', `perishable_token` = 'Ed8_FkZiAO3ptewMHUo5', `updated_at` = '2010-05-22 16:10:31' WHERE `id` = 2[0m
+  [4;35;1mSQL (47.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+ERROR: compiling _run_erb_app47views47users47show46html46erb RAISED /home/narshlob/eubpics/eubanks_family_website/app/views/users/show.html.erb:39: syntax error, unexpected '<', expecting ')'
+/home/narshlob/eubpics/eubanks_family_website/app/views/users/show.html.erb:39: unterminated regexp meets end of file
+Function body:           def _run_erb_app47views47users47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n  <b>Login:</b>\n  "
+
+; @output_buffer.concat((h @user.login ).to_s); @output_buffer.concat "\n</p>\n \n<p>\n  <b>Login count:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @user.login_count ).to_s); @output_buffer.concat "\n</p>\n \n<p>\n  <b>Last request at:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @user.last_request_at ).to_s); @output_buffer.concat "\n</p>\n \n<p>\n  <b>Last login at:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @user.last_login_at ).to_s); @output_buffer.concat "\n</p>\n \n<p>\n  <b>Current login at:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @user.current_login_at ).to_s); @output_buffer.concat "\n</p>\n \n<p>\n  <b>Last login ip:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @user.last_login_ip ).to_s); @output_buffer.concat "\n</p>\n \n<p>\n  <b>Current login ip:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @user.current_login_ip ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Manage Albums</b>\n  "
+
+
+
+
+; @output_buffer.concat((h albums_
+</p>
+ 
+ 
+<%= link_to 'Edit', edit_account_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/usr/local/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/usr/local/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/home/narshlob/eubpics/eubanks_family_website/app/views/users/show.html.erb:39: syntax error, unexpected '<', expecting ')'
+/home/narshlob/eubpics/eubanks_family_website/app/views/users/show.html.erb:39: unterminated regexp meets end of file) on line #39 of app/views/users/show.html.erb:
+36: <p>
+37:   <b>Manage Albums</b>
+38:   <%=h albums_
+39: </p>
+40:  
+41:  
+42: <%= link_to 'Edit', edit_account_path %>
+
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (54.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:11:23) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:11:23', `perishable_token` = 'revFOw41OUzDLb3BUqxR', `updated_at` = '2010-05-22 16:11:23' WHERE `id` = 2[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 187ms (View: 12, DB: 80) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:11:40) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:11:40', `perishable_token` = 'b4hs1DhN0WuefXGOPeMy', `updated_at` = '2010-05-22 16:11:40' WHERE `id` = 2[0m
+  [4;35;1mSQL (56.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (undefined method `a' for #<ActionView::Base:0xa32af48>) on line #38 of app/views/users/show.html.erb:
+35: 
+36: <p>
+37:   <b>Manage Albums</b>
+38:   <%=a albums_path %>
+39: </p>
+40:  
+41:  
+
+    app/views/users/show.html.erb:38
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (139.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:12:12) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:12:12', `perishable_token` = 'Vu-AIur893-2rXLGrGej', `updated_at` = '2010-05-22 16:12:12' WHERE `id` = 2[0m
+  [4;35;1mSQL (77.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 140ms (View: 20, DB: 82) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:12:29) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:12:29', `perishable_token` = 'pkRKuRCQglww94bUuVYP', `updated_at` = '2010-05-22 16:12:29' WHERE `id` = 2[0m
+  [4;35;1mSQL (52.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 114ms (View: 20, DB: 57) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:12:50) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:12:50', `perishable_token` = 'ljQQMr2Om6h-Ma2QriCo', `updated_at` = '2010-05-22 16:12:50' WHERE `id` = 2[0m
+  [4;35;1mSQL (58.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 183ms (View: 8, DB: 61) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:12:52) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:12:52', `perishable_token` = 'xOr2VHJJdHX9rEi98bAk', `updated_at` = '2010-05-22 16:12:52' WHERE `id` = 2[0m
+  [4;35;1mSQL (74.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 118ms (View: 3, DB: 78) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-05-22 10:12:57) [DELETE]
+  Parameters: {"_method"=>"delete", "controller"=>"user_sessions", "action"=>"destroy"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '1d31bb65d795d86951ee5baba47f8ef5dcba603bd444310a27faaf2034f70de1a75496d5b800e93675d32723c2e766ed9a4a49a1d595a3025a7a50af67041532') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:12:57', `perishable_token` = 'PKMQ018vgeM_FBDahtDz', `updated_at` = '2010-05-22 16:12:57' WHERE `id` = 2[0m
+  [4;35;1mSQL (50.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 95ms (DB: 55) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 10:12:57) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:13:38) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 46ms (DB: 1) | 302 Found [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 10:13:38) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mUser Columns (4.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 16ms (View: 2, DB: 5) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 10:13:47) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'narshlob') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `login_count` = 2, `last_login_at` = '2010-05-22 16:10:27', `current_login_at` = '2010-05-22 16:13:47', `last_login_ip` = '127.0.0.1', `last_request_at` = '2010-05-22 16:13:47', `perishable_token` = 'HGeWfTGpBb2MC_AFZPJY', `updated_at` = '2010-05-22 16:13:47' WHERE `id` = 2[0m
+  [4;35;1mSQL (55.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/albums
+Completed in 102ms (DB: 61) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:13:47) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (23.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:13:47', `perishable_token` = 'KR3ZrzDzFb1SBFoblY5A', `updated_at` = '2010-05-22 16:13:47' WHERE `id` = 2[0m
+  [4;35;1mSQL (66.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 121ms (View: 1, DB: 91) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 10:13:55) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:13:55', `perishable_token` = 'XFDN7R3tz9q-kvdqeff-', `updated_at` = '2010-05-22 16:13:55' WHERE `id` = 2[0m
+  [4;35;1mSQL (50.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 97ms (View: 4, DB: 55) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 10:13:56) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:13:56', `perishable_token` = 'LGwc2UA6xlMbnJqcDYZ4', `updated_at` = '2010-05-22 16:13:56' WHERE `id` = 2[0m
+  [4;35;1mSQL (56.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 98ms (View: 1, DB: 62) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 10:19:13) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:19:13', `perishable_token` = 'EB7EayBg6R3QFjg4CuTv', `updated_at` = '2010-05-22 16:19:13' WHERE `id` = 2[0m
+  [4;35;1mSQL (62.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Completed in 114ms (View: 10, DB: 65) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 10:22:59) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 16:22:59', `perishable_token` = 'HvMPXadt2fuHqxkReo8H', `updated_at` = '2010-05-22 16:22:59' WHERE `id` = 2[0m
+  [4;36;1mSQL (48.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Completed in 117ms (View: 19, DB: 54) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 10:23:59) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 16:23:59', `perishable_token` = 'KR7waJ_FkUWxUzlelugN', `updated_at` = '2010-05-22 16:23:59' WHERE `id` = 2[0m
+  [4;35;1mSQL (63.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Completed in 206ms (View: 94, DB: 69) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 10:31:19) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (13.9ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 16:31:20', `perishable_token` = '95PPllON-tsQ_y7oPdlL', `updated_at` = '2010-05-22 16:31:20' WHERE `id` = 2[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+
+ActionView::TemplateError (undefined local variable or method `f' for #<ActionView::Base:0xa50c94c>) on line #1 of app/views/albums/_form.html.erb:
+1: <%= f.label :album_name %> 
+2: <%= f.text_field :album_name %>
+
+    app/views/albums/_form.html.erb:1
+    app/views/albums/new.html.erb:5:in `block in _run_erb_app47views47albums47new46html46erb'
+    app/views/albums/new.html.erb:3
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (109.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 15:26:30) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:26:30', `perishable_token` = 'zpU20oecKxYUsqvwhAsH', `updated_at` = '2010-05-22 21:26:30' WHERE `id` = 2[0m
+  [4;35;1mSQL (75.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (1.7ms)
+Completed in 144ms (View: 20, DB: 81) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 15:33:06) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 21:33:06', `perishable_token` = '0gPoCdwhDmWNPvSloJ3S', `updated_at` = '2010-05-22 21:33:06' WHERE `id` = 2[0m
+  [4;36;1mSQL (77.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (0.6ms)
+Completed in 132ms (View: 4, DB: 84) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 15:33:17) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:33:17', `perishable_token` = '7ajSyz3U3wprUb9UZanT', `updated_at` = '2010-05-22 21:33:17' WHERE `id` = 2[0m
+  [4;35;1mSQL (64.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (0.6ms)
+Completed in 189ms (View: 4, DB: 70) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-22 15:33:25) [POST]
+  Parameters: {"album"=>{"album_name"=>"this as sparta"}, "commit"=>"Create", "controller"=>"albums", "action"=>"create"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 21:33:25', `perishable_token` = 'qVCKjHKnE-0hR0etEnfY', `updated_at` = '2010-05-22 21:33:25' WHERE `id` = 2[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAlbum Create (0.0ms)[0m   [0mMysql::Error: Column 'user_id' cannot be null: INSERT INTO `albums` (`album_name`, `scope`, `user_id`, `created_at`, `updated_at`) VALUES('this as sparta', NULL, NULL, '2010-05-22 21:33:25', '2010-05-22 21:33:25')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Column 'user_id' cannot be null: INSERT INTO `albums` (`album_name`, `scope`, `user_id`, `created_at`, `updated_at`) VALUES('this as sparta', NULL, NULL, '2010-05-22 21:33:25', '2010-05-22 21:33:25')):
+  app/controllers/albums_controller.rb:14:in `create'
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (57.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-05-22 15:52:34) [POST]
+  Parameters: {"album"=>{"album_name"=>"this as sparta"}, "commit"=>"Create", "controller"=>"albums", "action"=>"create"}
+
+SyntaxError (/home/narshlob/eubpics/eubanks_family_website/app/controllers/albums_controller.rb:13: syntax error, unexpected ')'):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-22 15:54:31) [POST]
+  Parameters: {"album"=>{"album_name"=>"this as sparta"}, "commit"=>"Create", "controller"=>"albums", "action"=>"create"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:54:31', `perishable_token` = 'sJ_ANiE86jWRUc2yatM-', `updated_at` = '2010-05-22 21:54:31' WHERE `id` = 2[0m
+  [4;35;1mSQL (44.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (0.5ms)[0m   [0;1mINSERT INTO `albums` (`album_name`, `scope`, `user_id`, `created_at`, `updated_at`) VALUES('this as sparta', NULL, 2, '2010-05-22 21:54:31', '2010-05-22 21:54:31')[0m
+  [4;35;1mSQL (36.6ms)[0m   [0mCOMMIT[0m
+
+ActionController::RoutingError (album_url failed to generate from {:controller=>"albums", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["albums", :id] - are they all satisfied?):
+  (eval):16:in `album_url'
+  app/controllers/albums_controller.rb:16:in `create'
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-22 15:55:15) [POST]
+  Parameters: {"album"=>{"album_name"=>"this as sparta"}, "commit"=>"Create", "controller"=>"albums", "action"=>"create"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:55:15', `perishable_token` = '7eElq7QMOvqtWLYzvPWL', `updated_at` = '2010-05-22 21:55:15' WHERE `id` = 2[0m
+  [4;35;1mSQL (68.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (0.2ms)[0m   [0;1mINSERT INTO `albums` (`album_name`, `scope`, `user_id`, `created_at`, `updated_at`) VALUES('this as sparta', NULL, 2, '2010-05-22 21:55:16', '2010-05-22 21:55:16')[0m
+  [4;35;1mSQL (60.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/albums/3
+Completed in 178ms (DB: 135) | 302 Found [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 15:55:16) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"3"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:55:16', `perishable_token` = '_qzJa_mkFvIbWTtzRWso', `updated_at` = '2010-05-22 21:55:16' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.3ms)[0m   [0mCOMMIT[0m
+
+ActionController::UnknownAction (No action responded to show. Actions: create, index, and new):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 15:55:41) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"3"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (4.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:55:41', `perishable_token` = 'Vjvfbj6fkxB9GglSSpqr', `updated_at` = '2010-05-22 21:55:41' WHERE `id` = 2[0m
+  [4;35;1mSQL (51.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 116ms (View: 19, DB: 59) | 200 OK [http://localhost/albums/3]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 15:56:45) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:56:45', `perishable_token` = '4LEtojxOEbH_9g2Fnghq', `updated_at` = '2010-05-22 21:56:45' WHERE `id` = 2[0m
+  [4;35;1mSQL (52.8ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 78ms (View: 2, DB: 56) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 15:56:52) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:56:52', `perishable_token` = '23yry00KHMmc78fYaD0E', `updated_at` = '2010-05-22 21:56:52' WHERE `id` = 2[0m
+  [4;35;1mSQL (52.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+
+ActionView::TemplateError (undefined method `merge' for [0, 1]:Array) on line #4 of app/views/albums/_form.html.erb:
+1: <%= form.label :album_name %> 
+2: <%= form.text_field :album_name %>
+3: <%= form.label :scope %>
+4: <%= form.select("album_scope", "scope", [0,1]) %>
+
+    app/views/albums/_form.html.erb:4
+    app/views/albums/new.html.erb:5:in `block in _run_erb_app47views47albums47new46html46erb'
+    app/views/albums/new.html.erb:3
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (116.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 15:59:19) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 21:59:19', `perishable_token` = 't13F8ZFHDuLPOZny60s6', `updated_at` = '2010-05-22 21:59:19' WHERE `id` = 2[0m
+  [4;36;1mSQL (57.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.3ms)
+Completed in 130ms (View: 21, DB: 63) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 15:59:47) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 21:59:47', `perishable_token` = '9ofeb2E240I3koHihA_g', `updated_at` = '2010-05-22 21:59:47' WHERE `id` = 2[0m
+  [4;35;1mSQL (45.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (1.1ms)
+Completed in 168ms (View: 9, DB: 49) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:10:24) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:10:24', `perishable_token` = 'dn-KAxcmrFZGXFR-moTZ', `updated_at` = '2010-05-22 22:10:24' WHERE `id` = 2[0m
+  [4;36;1mSQL (79.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.3ms)
+Completed in 153ms (View: 21, DB: 86) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:13:48) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 22:13:48', `perishable_token` = '5-MVSkCAfW0op578BHUS', `updated_at` = '2010-05-22 22:13:48' WHERE `id` = 2[0m
+  [4;35;1mSQL (46.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.5ms)
+Completed in 192ms (View: 22, DB: 53) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:14:14) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:14:14', `perishable_token` = 'cRf9_E8KDClx2cK_WVkl', `updated_at` = '2010-05-22 22:14:14' WHERE `id` = 2[0m
+  [4;36;1mSQL (86.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (3.5ms)
+Completed in 160ms (View: 22, DB: 93) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:14:27) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 22:14:27', `perishable_token` = 'psv9sqYKFpmX_aYza4DD', `updated_at` = '2010-05-22 22:14:27' WHERE `id` = 2[0m
+  [4;35;1mSQL (49.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.3ms)
+Completed in 125ms (View: 24, DB: 56) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:17:20) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:17:20', `perishable_token` = 'Fv_WZAPKMMIcJLT-pbHM', `updated_at` = '2010-05-22 22:17:20' WHERE `id` = 2[0m
+  [4;36;1mSQL (67.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.3ms)
+Completed in 140ms (View: 21, DB: 73) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:28:20) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 22:28:20', `perishable_token` = 'tpO64QByLsVxZ1pGRVzy', `updated_at` = '2010-05-22 22:28:20' WHERE `id` = 2[0m
+  [4;35;1mSQL (54.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.4ms)
+Completed in 145ms (View: 37, DB: 61) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:29:18) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:29:18', `perishable_token` = 'MBqaks5pO0XWHJTbSVE5', `updated_at` = '2010-05-22 22:29:18' WHERE `id` = 2[0m
+  [4;36;1mSQL (80.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (1.0ms)
+Completed in 156ms (View: 24, DB: 86) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:31:18) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 22:31:18', `perishable_token` = 'Q7cWUvLiJEwFXDwLm7Rl', `updated_at` = '2010-05-22 22:31:18' WHERE `id` = 2[0m
+  [4;35;1mSQL (62.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (1.0ms)
+Completed in 124ms (View: 5, DB: 69) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:31:54) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:31:54', `perishable_token` = 'XzaJxv1dRlzzeS_wvgZD', `updated_at` = '2010-05-22 22:31:54' WHERE `id` = 2[0m
+  [4;36;1mSQL (59.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (1.0ms)
+Completed in 117ms (View: 5, DB: 66) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:34:58) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 22:34:58', `perishable_token` = 'D_Ki4-zgWlE0h1hsa1gr', `updated_at` = '2010-05-22 22:34:58' WHERE `id` = 2[0m
+  [4;35;1mSQL (65.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.6ms)
+Completed in 139ms (View: 24, DB: 71) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:37:52) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:37:52', `perishable_token` = 'YQBnjcY-0XZwW2dJSDx5', `updated_at` = '2010-05-22 22:37:52' WHERE `id` = 2[0m
+  [4;36;1mSQL (65.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (0.4ms)
+Completed in 107ms (View: 2, DB: 70) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 16:48:15) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 22:48:15', `perishable_token` = '_FEzez3mmnaq6VL9Z7yZ', `updated_at` = '2010-05-22 22:48:15' WHERE `id` = 2[0m
+  [4;35;1mSQL (68.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (2.6ms)
+Completed in 140ms (View: 22, DB: 74) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 16:48:20) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:48:20', `perishable_token` = 'IHpAfE1dTC6k6yNK9bOf', `updated_at` = '2010-05-22 22:48:20' WHERE `id` = 2[0m
+  [4;36;1mSQL (57.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 141ms (View: 2, DB: 60) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-05-22 16:48:22) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:48:22', `perishable_token` = 'SVkl0-Qje1jh_jQ378xH', `updated_at` = '2010-05-22 22:48:22' WHERE `id` = 2[0m
+  [4;36;1mSQL (67.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (1.7ms)
+Completed in 102ms (View: 16, DB: 69) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-05-22 16:50:02) [GET]
+  Parameters: {"controller"=>"users", "action"=>"edit"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.9ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:50:02', `perishable_token` = 'g0SZT_iLEeUyollfZq71', `updated_at` = '2010-05-22 22:50:02' WHERE `id` = 2[0m
+  [4;36;1mSQL (61.8ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (4.3ms)
+Completed in 132ms (View: 25, DB: 69) | 200 OK [http://localhost/account/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 16:54:41) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:54:42', `perishable_token` = 'oSwii6Inv1yaWgdpdf5x', `updated_at` = '2010-05-22 22:54:42' WHERE `id` = 2[0m
+  [4;36;1mSQL (57.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 135ms (View: 2, DB: 61) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 16:54:44) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.8ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 22:54:44', `perishable_token` = 'q_t3SWq1dVKFTrsaCy9n', `updated_at` = '2010-05-22 22:54:44' WHERE `id` = 2[0m
+  [4;36;1mSQL (57.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 104ms (View: 3, DB: 62) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-22 16:59:49) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+
+SyntaxError (/home/narshlob/eubpics/eubanks_family_website/app/controllers/albums_controller.rb:5: syntax error, unexpected tASSOC, expecting ')'
+    @albums = Album.all(:conditions => "user_id" => current_user.id)
+                                                   ^
+/home/narshlob/eubpics/eubanks_family_website/app/controllers/albums_controller.rb:5: syntax error, unexpected ')', expecting keyword_end
+/home/narshlob/eubpics/eubanks_family_website/app/controllers/albums_controller.rb:19: syntax error, unexpected $end, expecting keyword_end):
+  <internal:prelude>:8:in `synchronize'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (88.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:00:18) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:00:18', `perishable_token` = 'Y8opHzypt9R5acAo2d4w', `updated_at` = '2010-05-22 23:00:18' WHERE `id` = 2[0m
+  [4;35;1mSQL (42.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 111ms (View: 18, DB: 48) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-05-22 17:00:30) [DELETE]
+  Parameters: {"_method"=>"delete", "controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 23:00:30', `perishable_token` = 'jFuXPNZTAMyzu00OUKT6', `updated_at` = '2010-05-22 23:00:30' WHERE `id` = 2[0m
+  [4;36;1mSQL (62.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 108ms (DB: 67) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 17:00:30) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 20ms (View: 3, DB: 2) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 17:00:37) [POST]
+  Parameters: {"user_session"=>{"login"=>"tracey", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'tracey') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `failed_login_count` = 1, `perishable_token` = 'VHttGgNQVi14dUgLx95m', `updated_at` = '2010-05-22 23:00:37' WHERE `id` = 1[0m
+  [4;36;1mSQL (67.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 112ms (View: 3, DB: 71) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 17:00:43) [POST]
+  Parameters: {"user_session"=>{"login"=>"tracey", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'tracey') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `failed_login_count` = 2, `perishable_token` = '5xDbZSidSZPWKzN3EKeE', `updated_at` = '2010-05-22 23:00:43' WHERE `id` = 1[0m
+  [4;36;1mSQL (53.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 117ms (View: 4, DB: 58) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 17:00:48) [POST]
+  Parameters: {"user_session"=>{"login"=>"tracey", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'tracey') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `failed_login_count` = 3, `perishable_token` = 'Eyz2t1Vdt3gOWV_cILY4', `updated_at` = '2010-05-22 23:00:48' WHERE `id` = 1[0m
+  [4;36;1mSQL (49.5ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 70ms (View: 3, DB: 51) | 200 OK [http://localhost/user_session]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-05-22 17:01:22) [GET]
+  Parameters: {"controller"=>"users", "action"=>"new"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.8ms)
+Completed in 43ms (View: 18, DB: 3) | 200 OK [http://localhost/account/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-05-22 17:01:49) [POST]
+  Parameters: {"user"=>{"email"=>"jonny_appleseed@yahoo.com", "login"=>"hahaha", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register", "controller"=>"users", "action"=>"create"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'jonny_appleseed@yahoo.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'hahaha') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'V7AFmLxamk-9mYQ83JgG') LIMIT 1[0m
+  [4;36;1mUser Create (0.7ms)[0m   [0;1mINSERT INTO `users` (`login`, `first_name`, `last_name`, `email`, `crypted_password`, `password_salt`, `persistence_token`, `single_access_token`, `perishable_token`, `login_count`, `failed_login_count`, `last_request_at`, `current_login_at`, `last_login_at`, `current_login_ip`, `last_login_ip`, `created_at`, `updated_at`) VALUES('hahaha', NULL, NULL, 'jonny_appleseed@yahoo.com', 'a5825e0d67adba1cb49966359b6c3a9e22edb1eb0920574c3f9ee57ca1b1916cbc67b007cd29650549402bb7af555b9c5e061cd7ddfd059d456ff49a7d4835a1', 'WNOGLFpk5P8n6Lt_USNi', '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898', 'V7AFmLxamk-9mYQ83JgG', '3LLM6tMTKpZiN_GwSDW0', 1, 0, '2010-05-22 23:01:49', '2010-05-22 23:01:49', NULL, '127.0.0.1', NULL, '2010-05-22 23:01:49', '2010-05-22 23:01:49')[0m
+  [4;35;1mSQL (42.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 91ms (DB: 48) | 302 Found [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 17:01:49) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:01:49', `perishable_token` = 'WV21AHLZ05E58MJg8vuy', `updated_at` = '2010-05-22 23:01:49' WHERE `id` = 3[0m
+  [4;35;1mSQL (45.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 65ms (View: 2, DB: 48) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:01:52) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:01:52', `perishable_token` = 'LKiGua0tkGOGnkj_zM0x', `updated_at` = '2010-05-22 23:01:52' WHERE `id` = 3[0m
+  [4;35;1mSQL (45.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 3) [0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 115ms (View: 3, DB: 60) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-22 17:01:58) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"new"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 23:01:58', `perishable_token` = 'GL3haygTSzIEG-kO4u3X', `updated_at` = '2010-05-22 23:01:58' WHERE `id` = 3[0m
+  [4;36;1mSQL (66.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/application
+Rendering albums/new
+Rendered albums/_form (0.6ms)
+Completed in 161ms (View: 3, DB: 71) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-22 17:02:30) [POST]
+  Parameters: {"album"=>{"album_name"=>"a new album", "scope"=>"private"}, "commit"=>"Create", "controller"=>"albums", "action"=>"create"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:31', `perishable_token` = 'YRPDuF9xApV4Sh6-nLFo', `updated_at` = '2010-05-22 23:02:31' WHERE `id` = 3[0m
+  [4;35;1mSQL (65.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (0.4ms)[0m   [0;1mINSERT INTO `albums` (`album_name`, `scope`, `user_id`, `created_at`, `updated_at`) VALUES('a new album', 'private', 3, '2010-05-22 23:02:31', '2010-05-22 23:02:31')[0m
+  [4;35;1mSQL (56.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/albums/4
+Completed in 183ms (DB: 128) | 302 Found [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 17:02:31) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"4"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:31', `perishable_token` = '7_E8hWpG9RicV54VGuXI', `updated_at` = '2010-05-22 23:02:31' WHERE `id` = 3[0m
+  [4;35;1mSQL (59.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 126ms (View: 22, DB: 63) | 200 OK [http://localhost/albums/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 17:02:33) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:33', `perishable_token` = '4V0a_TM4vblHxdvQ4WRX', `updated_at` = '2010-05-22 23:02:33' WHERE `id` = 3[0m
+  [4;35;1mSQL (64.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 113ms (View: 4, DB: 69) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (19.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:02:35) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:35', `perishable_token` = 'szpvbsAhAv7F_UOfdUH9', `updated_at` = '2010-05-22 23:02:35' WHERE `id` = 3[0m
+  [4;35;1mSQL (37.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 3) [0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 89ms (View: 3, DB: 62) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-05-22 17:02:38) [DELETE]
+  Parameters: {"_method"=>"delete", "controller"=>"user_sessions", "action"=>"destroy"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '208b6f154651dff0828fa8adec2113513026b506dee2814ac8a0f55017c915841bf520dd913cbd3499f051e37fd0e4be5954455bceeed6290f946e6e43ac2898') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:38', `perishable_token` = 'CMJRhCgfqZNmYySn_hiP', `updated_at` = '2010-05-22 23:02:38' WHERE `id` = 3[0m
+  [4;36;1mSQL (43.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 174ms (DB: 47) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 17:02:38) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 17:02:44) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'narshlob') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `login_count` = 3, `last_login_at` = '2010-05-22 16:13:47', `current_login_at` = '2010-05-22 23:02:44', `last_request_at` = '2010-05-22 23:02:44', `perishable_token` = 'O9CQmJ-G5kI7SaInWjjr', `updated_at` = '2010-05-22 23:02:44' WHERE `id` = 2[0m
+  [4;36;1mSQL (47.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 93ms (DB: 52) | 302 Found [http://localhost/user_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 17:02:45) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:45', `perishable_token` = 'fUjKUSnIVJjnAQ3HjBvM', `updated_at` = '2010-05-22 23:02:45' WHERE `id` = 2[0m
+  [4;36;1mSQL (52.9ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 75ms (View: 2, DB: 55) | 200 OK [http://localhost/account]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:02:46) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.6ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:46', `perishable_token` = 'W71iQGbcmrBnwqBs3I-L', `updated_at` = '2010-05-22 23:02:46' WHERE `id` = 2[0m
+  [4;36;1mSQL (53.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 106ms (View: 3, DB: 58) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 17:02:49) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:02:49', `perishable_token` = 'aJSUl-lUXYQNEE1woJ30', `updated_at` = '2010-05-22 23:02:49' WHERE `id` = 2[0m
+  [4;35;1mSQL (51.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 98ms (View: 4, DB: 56) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:03:01) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:03:01', `perishable_token` = 'z44mvbxOODGzeTt5oqTa', `updated_at` = '2010-05-22 23:03:01' WHERE `id` = 2[0m
+  [4;35;1mSQL (32.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+Completed in 61ms (View: 1, DB: 38) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:14:50) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-05-22 23:14:50', `perishable_token` = '0LZXyvzdD7N-Abc_1jDv', `updated_at` = '2010-05-22 23:14:50' WHERE `id` = 2[0m
+  [4;36;1mSQL (67.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Load (0.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+ERROR: compiling _run_erb_app47views47albums47index46html46erb RAISED /home/narshlob/eubpics/eubanks_family_website/app/views/albums/index.html.erb:1: syntax error, unexpected ')'
+...cat(( @albums.each do |album| ).to_s); @output_buffer.concat...
+...                               ^
+/home/narshlob/eubpics/eubanks_family_website/app/views/albums/index.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+/home/narshlob/eubpics/eubanks_family_website/app/views/albums/index.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _run_erb_app47views47albums47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( @albums.each do |album| ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( album.name ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( album.scope ).to_s); @output_buffer.concat "\n"
+;  end ; @output_buffer.concat "\n"
+; @output_buffer.force_encoding(__ENCODING__)
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `module_eval'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:77:in `compile!'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/usr/local/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/usr/local/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/usr/local/lib/ruby/gems/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action_with_flash'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process_with_filters'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:8:in `synchronize'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/usr/local/lib/ruby/gems/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/home/narshlob/eubpics/eubanks_family_website/app/views/albums/index.html.erb:1: syntax error, unexpected ')'
+...cat(( @albums.each do |album| ).to_s); @output_buffer.concat...
+...                               ^
+/home/narshlob/eubpics/eubanks_family_website/app/views/albums/index.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+/home/narshlob/eubpics/eubanks_family_website/app/views/albums/index.html.erb:8: syntax error, unexpected keyword_end, expecting ')') on line #1 of app/views/albums/index.html.erb:
+1: <%= @albums.each do |album| %>
+2:   <%= album.name %>
+3:   <%= album.scope %>
+4: <% end %>
+
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (130.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:15:09) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:15:09', `perishable_token` = 'RWxm4IRhELLxQTtHlWhf', `updated_at` = '2010-05-22 23:15:09' WHERE `id` = 2[0m
+  [4;35;1mSQL (36.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+
+ActionView::TemplateError (undefined method `name' for #<Album:0xa829388>) on line #2 of app/views/albums/index.html.erb:
+1: <% @albums.each do |album| %>
+2:   <%= album.name %>
+3:   <%= album.scope %>
+4: <% end %>
+
+    app/views/albums/index.html.erb:2:in `block in _run_erb_app47views47albums47index46html46erb'
+    app/views/albums/index.html.erb:1:in `each'
+    app/views/albums/index.html.erb:1
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (56.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:15:26) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (9.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:15:26', `perishable_token` = 'ugBole5UR3fVAZaE71_-', `updated_at` = '2010-05-22 23:15:26' WHERE `id` = 2[0m
+  [4;35;1mSQL (64.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 128ms (View: 9, DB: 78) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:18:39) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:18:39', `perishable_token` = 'mJ8DOxLxP5FqS-5g-60K', `updated_at` = '2010-05-22 23:18:39' WHERE `id` = 2[0m
+  [4;35;1mSQL (50.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 139ms (View: 34, DB: 59) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-05-22 17:21:07) [DELETE]
+  Parameters: {"_method"=>"delete", "controller"=>"user_sessions", "action"=>"destroy"}
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:21:07', `perishable_token` = 'phRGACL-x5OnbVcKZmZk', `updated_at` = '2010-05-22 23:21:07' WHERE `id` = 2[0m
+  [4;35;1mSQL (76.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 118ms (DB: 81) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 17:21:07) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 17:21:50) [POST]
+  Parameters: {"user_session"=>{"login"=>"hahaha", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'hahaha') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `login_count` = 2, `last_login_at` = '2010-05-22 23:01:49', `current_login_at` = '2010-05-22 23:21:50', `last_login_ip` = '127.0.0.1', `last_request_at` = '2010-05-22 23:21:50', `perishable_token` = 'T6Tr3UlLNUqfVd59THzq', `updated_at` = '2010-05-22 23:21:50' WHERE `id` = 3[0m
+  [4;35;1mSQL (53.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 139ms (DB: 58) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 17:21:50) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:21:50', `perishable_token` = '7-kI2CqePfmuoosw2Rbj', `updated_at` = '2010-05-22 23:21:50' WHERE `id` = 3[0m
+  [4;35;1mSQL (42.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 64ms (View: 2, DB: 44) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:21:52) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:21:52', `perishable_token` = 'lOvS1akMCCzMmqnxirrC', `updated_at` = '2010-05-22 23:21:52' WHERE `id` = 3[0m
+  [4;35;1mSQL (52.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 3) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 127ms (View: 24, DB: 59) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:42:29) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:42:29', `perishable_token` = 'IQ6FBC4hKWnBRtot5_KJ', `updated_at` = '2010-05-22 23:42:29' WHERE `id` = 3[0m
+  [4;35;1mSQL (49.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 3) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+
+ActionView::TemplateError (album_url failed to generate from {:controller=>"albums", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["albums", :id] - are they all satisfied?) on line #5 of app/views/albums/index.html.erb:
+2: <% @albums.each do |album| %>
+3:   <div class="row">
+4:     <div class="data">Album Name</div>
+5:     <div class="data"><%= link_to(album.album_name, "#{album_path}/#{album.id}") %></div>
+6:   </div>
+7: 
+8:   <div class="row">
+
+    (eval):16:in `album_path'
+    app/views/albums/index.html.erb:5:in `block in _run_erb_app47views47albums47index46html46erb'
+    app/views/albums/index.html.erb:2:in `each'
+    app/views/albums/index.html.erb:2
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (107.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:43:16) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.8ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:16', `perishable_token` = 'K9Qpcf9RhIHxWajg7uMC', `updated_at` = '2010-05-22 23:43:16' WHERE `id` = 3[0m
+  [4;35;1mSQL (50.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 3) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 134ms (View: 28, DB: 58) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 17:43:21) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"4"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:21', `perishable_token` = '1Ye6Rq27qlQSy1MK5TIC', `updated_at` = '2010-05-22 23:43:21' WHERE `id` = 3[0m
+  [4;35;1mSQL (43.3ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 91ms (View: 3, DB: 48) | 200 OK [http://localhost/albums/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-05-22 17:43:28) [DELETE]
+  Parameters: {"_method"=>"delete", "controller"=>"user_sessions", "action"=>"destroy"}
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '3') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:28', `perishable_token` = '-QoqkVu6V3RoA6IAJZj3', `updated_at` = '2010-05-22 23:43:28' WHERE `id` = 3[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 165ms (DB: 48) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-05-22 17:43:28) [GET]
+  Parameters: {"controller"=>"user_sessions", "action"=>"new"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/user_session/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-05-22 17:43:38) [POST]
+  Parameters: {"user_session"=>{"login"=>"narshlob", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "controller"=>"user_sessions", "action"=>"create"}
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'narshlob') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.6ms)[0m   [0;1mUPDATE `users` SET `login_count` = 4, `last_login_at` = '2010-05-22 23:02:44', `current_login_at` = '2010-05-22 23:43:38', `last_request_at` = '2010-05-22 23:43:38', `perishable_token` = 'xqcvJgFaxDmpjVi6Pkaw', `updated_at` = '2010-05-22 23:43:38' WHERE `id` = 2[0m
+  [4;35;1mSQL (74.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/account
+Completed in 121ms (DB: 79) | 302 Found [http://localhost/user_session]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-05-22 17:43:38) [GET]
+  Parameters: {"controller"=>"users", "action"=>"show"}
+  [4;35;1mUser Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:38', `perishable_token` = 'NL77ZkoU0uU_G3B3G7kh', `updated_at` = '2010-05-22 23:43:38' WHERE `id` = 2[0m
+  [4;35;1mSQL (76.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 97ms (View: 2, DB: 78) | 200 OK [http://localhost/account]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 17:43:40) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.7ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:40', `perishable_token` = 'DDorkDpd9kcxYkNfAT1s', `updated_at` = '2010-05-22 23:43:40' WHERE `id` = 2[0m
+  [4;35;1mSQL (48.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.2ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 107ms (View: 7, DB: 55) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 17:43:42) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"2"}
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:42', `perishable_token` = 'B4qKuLks4vz1yONivZWZ', `updated_at` = '2010-05-22 23:43:42' WHERE `id` = 2[0m
+  [4;35;1mSQL (41.1ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 155ms (View: 1, DB: 45) | 200 OK [http://localhost/albums/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 17:43:45) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"3"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (12.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-22 23:43:45', `perishable_token` = 'b1KnAQy8l-fV_j9GCv9W', `updated_at` = '2010-05-22 23:43:45' WHERE `id` = 2[0m
+  [4;35;1mSQL (77.0ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 136ms (View: 3, DB: 93) | 200 OK [http://localhost/albums/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-22 18:03:09) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"index"}
+  [4;35;1mUser Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-23 00:03:09', `perishable_token` = 'GwCKMzqBDTvhtuB3Tset', `updated_at` = '2010-05-23 00:03:09' WHERE `id` = 2[0m
+  [4;35;1mSQL (58.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Load (0.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`user_id` = 2) [0m
+Rendering template within layouts/application
+Rendering albums/index
+  [4;35;1mAlbum Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 83ms (View: 3, DB: 61) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 18:03:27) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"2"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-23 00:03:27', `perishable_token` = 'n2XLeGgTeRKg-xcB7sLn', `updated_at` = '2010-05-23 00:03:27' WHERE `id` = 2[0m
+  [4;35;1mSQL (53.5ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 101ms (View: 4, DB: 57) | 200 OK [http://localhost/albums/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-22 21:03:42) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"2"}
+  [4;35;1mUser Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-23 03:03:42', `perishable_token` = '3LfFffE6Kfg8GD86gG1a', `updated_at` = '2010-05-23 03:03:42' WHERE `id` = 2[0m
+  [4;35;1mSQL (52.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 102ms (View: 3, DB: 58) | 200 OK [http://localhost/albums/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-23 16:42:10) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"2"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '2') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-05-23 22:42:10', `perishable_token` = 'EvXmSXaqB4vXl4lyjQc_', `updated_at` = '2010-05-23 22:42:10' WHERE `id` = 2[0m
+  [4;35;1mSQL (60.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 88ms (View: 1, DB: 64) | 200 OK [http://localhost/albums/2]

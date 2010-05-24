@@ -1,0 +1,13 @@
+<div class="table">
+<% @albums.each do |album| %>
+  <div class="row">
+    <div class="data">Album Name</div>
+    <div class="data"><%= link_to(album.album_name, album_path(album.id)) %></div>
+  </div>
+
+  <div class="row">
+    <div class="data">Scope</div>
+    <div class="data"><%= album.scope %></div>
+  </div>
+<% end %>
+</div>

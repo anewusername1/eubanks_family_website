@@ -1,0 +1,16 @@
+.table{
+  display: table;
+}
+
+.data{
+  display: table-cell;
+  padding: 3px;
+}
+
+.row{
+  display: table-row;
+}
+
+.light_border{
+  border: 0.5px dashed #999;
+}
