@@ -6,7 +6,25 @@ class AlbumsController < ApplicationController
   end
 
   def new
-    Album.new
+    @user = Album.new
+  end
+
+  def edit
+    @album = Album.find(params[:id])
+  end
+
+  def show
+    @album = Album.find(params[:id])
+  end
+
+  def update
+    @album = Album.find(params[:id])
+    if @album.update_attributes(params[:album].merge(:user => current_user))
+      flash[:notice] = "Album updated!"
+      redirect_to album_url(@album.id)
+    else
+      render :action => :edit
+    end
   end
 
   def create
