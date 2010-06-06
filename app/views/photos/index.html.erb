@@ -2,7 +2,7 @@
 <% @photos.each do |photo| %>
   <div class="row">
     <div class="data">Photo Caption</div>
-    <div class="data"><%= link_to(photo.photo_caption, album_photo_path(photo.id)) %></div>
+    <div class="data"><%= link_to(photo.caption, album_photo_path(photo.id)) %></div>
   </div>
 
   <div class="row">

@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.my_stats 'account/my_stats', :controller => 'users', :action => 'my_stats'
   map.resource :user_session
-  map.resources :albums do |album|
+  map.resources :albums, :has_many => [:photos] do |album|
     album.resources :photos
   end
   map.root :controller => "user_sessions", :action => "new" 
