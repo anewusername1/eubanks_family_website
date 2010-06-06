@@ -1,8 +1,11 @@
+<% for page in @page.ancestors.reverse %>
+  <%= link_to h(page.name), page %> &gt;
+<% end %>
 <div class="table">
 <% @photos.each do |photo| %>
   <div class="row">
     <div class="data">Photo Caption</div>
-    <div class="data"><%= link_to(photo.caption, album_photo_path(photo.id)) %></div>
+    <div class="data"><%= link_to(photo.caption, album_photo_path(@album.id, photo.id)) %></div>
   </div>
 
   <div class="row">
