@@ -3,7 +3,7 @@
 development:
   adapter: mysql
   database: photo_album_development
-  user: root
+  user: fammmily
   password:
   pool: 5
   timeout: 5000

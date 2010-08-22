@@ -1,0 +1,18 @@
+# efw generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+actionmailer -v2.3.8
+actionpack -v2.3.8
+activerecord -v2.3.8
+activeresource -v2.3.8
+activesupport -v2.3.8
+authlogic -v2.1.6
+builder -v2.1.2
+cucumber -v0.8.5
+diff-lcs -v1.1.2
+gherkin -v2.1.5
+haml -v3.0.17
+json_pure -v1.4.6
+mysql -v2.8.1
+rack -v1.1.0
+rails -v2.3.8
+term-ansicolor -v1.0.5
+trollop -v1.16.2
