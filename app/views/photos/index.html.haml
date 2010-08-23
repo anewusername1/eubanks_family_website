@@ -1,0 +1,21 @@
+%table
+  - @photos.each do |photo|
+    %row
+      %data
+        Photo Caption
+      %data
+        = link_to(photo.caption, album_photo_path(@album.id, photo.id))
+
+    %row
+      %data
+        Photo Tags
+      %data
+        = photo.tags
+  
+    %row
+      %data
+        Scope
+      %data
+      = photo.scope
+
+= link_to "New Photo", new_album_photo_path

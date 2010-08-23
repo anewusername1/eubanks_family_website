@@ -1,0 +1,6 @@
+edit an Photo
+%table
+  - form_for :photo, @photo, :url => album_photo_path(@album.id), :html => {:method => :put} do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    = f.submit 'Save' 

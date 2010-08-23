@@ -4980,3 +4980,901 @@ Processing AlbumsController#show (for 127.0.0.1 at 2010-06-05 17:18:14) [GET]
 Rendering template within layouts/application
 Rendering albums/show
 Completed in 125ms (View: 3, DB: 67) | 200 OK [http://localhost/albums/2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-08-22 18:02:06) [GET]
+  Parameters: {"controller"=>"albums", "action"=>"show", "id"=>"1"}
+  [4;35;1mUser Columns (33.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:02:06', `perishable_token` = '05302uoi9ZZYuaHQ0nKv', `updated_at` = '2010-08-23 00:02:06' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering albums/show
+Completed in 113ms (View: 12, DB: 40) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:02:08) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:02:09', `perishable_token` = 'bw1p6OSi7fdXizQzgrgD', `updated_at` = '2010-08-23 00:02:09' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+
+ActionView::MissingTemplate (Missing template photos/index.erb in view path /Users/traceyeubanks/Development/eubanks_family_website/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:03:45) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (30.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-08-23 00:03:45', `perishable_token` = 'Jnbf9UWL2QokQmnh1xL0', `updated_at` = '2010-08-23 00:03:45' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (3.3ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+
+ActionView::MissingTemplate (Missing template photos/index.erb in view path /Users/traceyeubanks/Development/eubanks_family_website/app/views):
+  <internal:prelude>:10:in `synchronize'
+  /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:04:13) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (36.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:04:13', `perishable_token` = 'N0KVSU3WG6sLG4FFBNf', `updated_at` = '2010-08-23 00:04:13' WHERE `id` = 1[0m
+  [4;35;1mSQL (28.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.5ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: 2 spaces were used for indentation, but the rest of the document was indented using 1 tab.) on line #3 of app/views/photos/index.html.haml:
+1: %table
+2: 	= @photos.each do |photo|
+3:   %row
+4:     %data
+5: 			Photo Caption
+6:     %data
+
+    app/views/photos/index.html.haml:3
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:387:in `push_script'
+    haml (3.0.17) lib/haml/precompiler.rb:224:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:05:20) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;36;1mUser Columns (125.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-08-23 00:05:20', `perishable_token` = 'B3og3S9G1IzEOsc5adv', `updated_at` = '2010-08-23 00:05:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.3ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (46.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:05:21) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (36.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:05:21', `perishable_token` = 'ktTVbbiUVdQUWw4cJ2b', `updated_at` = '2010-08-23 00:05:21' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.5ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:00) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (36.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:00', `perishable_token` = 'b5xejOjYnlWvvHZU0nJD', `updated_at` = '2010-08-23 00:06:00' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (49.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:19) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (37.7ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:19', `perishable_token` = '3CRr2ZzPYtpED9drKM08', `updated_at` = '2010-08-23 00:06:19' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.5ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (46.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:20) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (33.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:20', `perishable_token` = 'KfhT7maLklaynSENH9N', `updated_at` = '2010-08-23 00:06:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.8ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:30) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (13.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:30', `perishable_token` = 'cDUyBOzTdzkG2Sr4S9RK', `updated_at` = '2010-08-23 00:06:30' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (53.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:31) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:31', `perishable_token` = 'plot8GsPXCWEWi9nPEUW', `updated_at` = '2010-08-23 00:06:31' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:32) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (197.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:32', `perishable_token` = '6Te4dxIVBTGHS7436Sw', `updated_at` = '2010-08-23 00:06:32' WHERE `id` = 1[0m
+  [4;35;1mSQL (27.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+
+ActionView::TemplateError (Inconsistent indentation: "  \t  " was used for indentation, but the rest of the document was indented using 2 spaces.) on line #13 of app/views/photos/index.html.haml:
+10:     %data
+11:       Photo Tags
+12:     %data
+13:   	  = photo.tags
+14:   
+15:   %row
+16:     %data
+
+    app/views/photos/index.html.haml:13
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (50.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:06:45) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (36.7ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE `users` SET `last_request_at` = '2010-08-23 00:06:45', `perishable_token` = 'nP5p3t4gAOVh2gEQOwm', `updated_at` = '2010-08-23 00:06:45' WHERE `id` = 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mAlbum Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+ERROR: compiling _run_haml_app47views47photos47index46html46haml RAISED /Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected ')'
+));}\n  <row>\n    <data>\n   ...
+ ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected $undefined
+));}\n  <row>\n    <data>\n      Photo Capt...
+              ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected $undefined
+));}\n  <row>\n    <data>\n      Photo Caption\n    </d...
+                          ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected $undefined, expecting keyword_end
+...   <data>\n      Photo Caption\n    </data>\n    <data>\n   ...
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: unknown regexp options - data
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: syntax error, unexpected $undefined
+));}\n    </data>\n  </row>\n  <row>\n    <data...
+                  ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: unknown regexp options - data
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: syntax error, unexpected $undefined
+...n      Photo Tags\n    </data>\n    <data>\n      #{
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: syntax error, unexpected $undefined
+... Tags\n    </data>\n    <data>\n      #{
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected '}', expecting keyword_end
+));}\n    </data>\n  </row>\n  <r...
+    ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: unknown regexp options - rw
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+));}\n    </data>\n  </row>\n  <row>\n    <data>\n      S...
+                            ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+...    </data>\n  </row>\n  <row>\n    <data>\n      Scope\n   ...
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+...n  </row>\n  <row>\n    <data>\n      Scope\n    </data>\n  ...
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: unknown regexp options - data
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+...    </data>\n    <data></data>\n    #{
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:20: syntax error, unexpected '}', expecting keyword_end
+));}\n  </row>\n</table>\n#{
+    ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:20: unknown regexp options - tabl
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:20: syntax error, unexpected $undefined
+));}\n  </row>\n</table>\n#{
+                         ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:22: syntax error, unexpected '}', expecting keyword_end
+));}\n", 0, false);_erbout;ensure...
+    ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:22: unterminated string meets end of file
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:22: syntax error, unexpected $end, expecting keyword_end
+Function body: #coding:UTF-8
+          def _run_haml_app47views47photos47index46html46haml(local_assigns)
+            old_output_buffer = output_buffer;;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:xhtml, :encoding=>"UTF-8", :escape_html=>false});_erbout = _hamlout.buffer;__in_erb_template = true;;_hamlout.push_text("<table>\n  #{
+_hamlout.adjust_tabs(1); _hamlout.format_script_false_false_false_false_false_true_false(( @photos.each do |photo|
+));}\n  <row>\n    <data>\n      Photo Caption\n    </data>\n    <data>\n      #{
+
+
+
+_hamlout.adjust_tabs(2); _hamlout.format_script_false_false_false_false_false_true_false(( link_to(photo.caption, album_photo_path(@album.id, photo.id))
+));}\n    </data>\n  </row>\n  <row>\n    <data>\n      Photo Tags\n    </data>\n    <data>\n      #{
+
+
+
+
+_hamlout.format_script_false_false_false_false_false_true_false(( photo.tags
+));}\n    </data>\n  </row>\n  <row>\n    <data>\n      Scope\n    </data>\n    <data></data>\n    #{
+
+
+
+
+_hamlout.adjust_tabs(-1); _hamlout.format_script_false_false_false_false_false_true_false(( photo.scope
+));}\n  </row>\n</table>\n#{
+_hamlout.adjust_tabs(-2); _hamlout.format_script_false_false_false_false_false_true_false(( link_to "New Photo", new_album_photo_path
+));}\n", 0, false);_erbout;ensure;@haml_buffer = @haml_buffer.upper;end;
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `module_eval'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/renderable.rb:91:in `compile!'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/haml-3.0.17/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/haml-3.0.17/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `block in render_with_benchmark'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `block in perform_action_with_benchmark'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `block in ms'
+/Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action_with_flash'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process_with_filters'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `block in call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/haml-3.0.17/lib/sass/plugin/rack.rb:41:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `block in call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `block in call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/traceyeubanks/.rvm/gems/ruby-1.9.2-rc2@efw/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+/Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+ActionView::TemplateError (/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected ')'
+));}\n  <row>\n    <data>\n   ...
+ ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected $undefined
+));}\n  <row>\n    <data>\n      Photo Capt...
+              ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected $undefined
+));}\n  <row>\n    <data>\n      Photo Caption\n    </d...
+                          ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:3: syntax error, unexpected $undefined, expecting keyword_end
+...   <data>\n      Photo Caption\n    </data>\n    <data>\n   ...
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: unknown regexp options - data
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: syntax error, unexpected $undefined
+));}\n    </data>\n  </row>\n  <row>\n    <data...
+                  ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: unknown regexp options - data
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: syntax error, unexpected $undefined
+...n      Photo Tags\n    </data>\n    <data>\n      #{
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:8: syntax error, unexpected $undefined
+... Tags\n    </data>\n    <data>\n      #{
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected '}', expecting keyword_end
+));}\n    </data>\n  </row>\n  <r...
+    ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: unknown regexp options - rw
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+));}\n    </data>\n  </row>\n  <row>\n    <data>\n      S...
+                            ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+...    </data>\n  </row>\n  <row>\n    <data>\n      Scope\n   ...
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+...n  </row>\n  <row>\n    <data>\n      Scope\n    </data>\n  ...
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: unknown regexp options - data
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:14: syntax error, unexpected $undefined
+...    </data>\n    <data></data>\n    #{
+...                               ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:20: syntax error, unexpected '}', expecting keyword_end
+));}\n  </row>\n</table>\n#{
+    ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:20: unknown regexp options - tabl
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:20: syntax error, unexpected $undefined
+));}\n  </row>\n</table>\n#{
+                         ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:22: syntax error, unexpected '}', expecting keyword_end
+));}\n", 0, false);_erbout;ensure...
+    ^
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:22: unterminated string meets end of file
+/Users/traceyeubanks/Development/eubanks_family_website/app/views/photos/index.html.haml:22: syntax error, unexpected $end, expecting keyword_end) on line #3 of app/views/photos/index.html.haml:
+1: %table
+2:   = @photos.each do |photo|
+3:   %row
+4:     %data
+5:       Photo Caption
+6:     %data
+
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (45.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-08-22 18:10:57) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"index", "album_id"=>"1"}
+  [4;35;1mUser Columns (61.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:10:57', `perishable_token` = 'IEQuJRmOUB7egkm6u9c', `updated_at` = '2010-08-23 00:10:57' WHERE `id` = 1[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (2.1ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`album_id` = '1') [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;35;1mPhoto Columns (3.4ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 164ms (View: 40, DB: 80) | 200 OK [http://localhost/albums/1/photos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-08-22 18:11:16) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"show", "album_id"=>"1", "id"=>"1"}
+  [4;35;1mUser Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (38.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:11:16', `perishable_token` = 'bzxvcUMysBuRtD2OY5l', `updated_at` = '2010-08-23 00:11:16' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (1.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 111ms (View: 7, DB: 49) | 200 OK [http://localhost/albums/1/photos/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-08-22 18:11:20) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"show", "album_id"=>"1", "id"=>"1"}
+  [4;35;1mUser Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (38.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:11:20', `perishable_token` = 'MLEbV1vFl3xKmXHVyKx1', `updated_at` = '2010-08-23 00:11:20' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.3ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (1.5ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 110ms (View: 2, DB: 49) | 200 OK [http://localhost/albums/1/photos/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-08-22 18:11:25) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"show", "album_id"=>"1", "id"=>"1"}
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (37.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:11:25', `perishable_token` = 'IM6q1cbrRTO4nZKGA1g', `updated_at` = '2010-08-23 00:11:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.4ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 104ms (View: 3, DB: 47) | 200 OK [http://localhost/albums/1/photos/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-08-22 18:11:28) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"edit", "album_id"=>"1", "id"=>"1"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:11:28', `perishable_token` = 'sOYzRCCai7GoY4WlW', `updated_at` = '2010-08-23 00:11:28' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (2.0ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (3.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+
+ActionView::TemplateError (Inconsistent indentation: "  \t" was used for indentation, but the rest of the document was indented using 1 tab.) on line #4 of app/views/photos/edit.html.haml:
+1: edit an Photo
+2: %table
+3: 	- form_for :photo, @photo, :url => album_photo_path(@album.id), :html => {:method => :put} do |f|
+4:   	= f.error_messages
+5:   	= render :partial => "form", :object => f
+6:   	= f.submit 'Save' 
+
+    app/views/photos/edit.html.haml:4
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:246:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-08-22 18:12:11) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"edit", "album_id"=>"1", "id"=>"1"}
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (41.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:12:11', `perishable_token` = 'dTEro9MRgLcMGLcQo0K', `updated_at` = '2010-08-23 00:12:11' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.4ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (1.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+
+ActionView::TemplateError (Inconsistent indentation: 2 tabs were used for indentation, but the rest of the document was indented using 2 spaces.) on line #3 of app/views/photos/_form.html.haml:
+1: %div{:class => "row light_border"}
+2:   %div{:class => "data light_border"}
+3: 		= form.label :caption
+4:   %div{:class => "data light_border"}
+5: 		= form.text_field :caption
+6: 
+
+    app/views/photos/_form.html.haml:3
+    haml (3.0.17) lib/haml/precompiler.rb:155:in `block in tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `instance_eval'
+    haml (3.0.17) lib/haml/precompiler.rb:134:in `tabs'
+    haml (3.0.17) lib/haml/precompiler.rb:1039:in `block_opened?'
+    haml (3.0.17) lib/haml/precompiler.rb:767:in `render_tag'
+    haml (3.0.17) lib/haml/precompiler.rb:214:in `process_line'
+    haml (3.0.17) lib/haml/precompiler.rb:178:in `precompile'
+    haml (3.0.17) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.17) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:11:in `block in render_with_haml'
+    haml (3.0.17) lib/haml/helpers.rb:90:in `non_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:11:in `render_with_haml'
+    app/views/photos/edit.html.haml:5:in `block in _run_haml_app47views47photos47edit46html46haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:229:in `call'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:229:in `block in form_for_with_haml'
+    haml (3.0.17) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.17) lib/haml/helpers.rb:588:in `block in haml_bind_proc'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:235:in `form_for_with_haml'
+    app/views/photos/edit.html.haml:3:in `_run_haml_app47views47photos47edit46html46haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (3.0.17) lib/sass/plugin/rack.rb:41:in `call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /Users/traceyeubanks/.rvm/rubies/ruby-1.9.2-rc2/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (54.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-08-22 18:13:32) [GET]
+  Parameters: {"controller"=>"photos", "action"=>"edit", "album_id"=>"1", "id"=>"1"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (33.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.4ms)[0m   [0;1mUPDATE `users` SET `last_request_at` = '2010-08-23 00:13:32', `perishable_token` = 'hELJ7ePQtQxts4WupWuu', `updated_at` = '2010-08-23 00:13:32' WHERE `id` = 1[0m
+  [4;35;1mSQL (25.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mAlbum Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.4ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mPhoto Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (1.4ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (4.4ms)
+Completed in 111ms (View: 12, DB: 68) | 200 OK [http://localhost/albums/1/photos/1/edit]

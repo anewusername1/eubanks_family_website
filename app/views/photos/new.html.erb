@@ -1,8 +1,0 @@
-Upload a Photo
-<div class="table">
-<% form_for :photo, @photo, :url => {:action => "create"} do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit 'Upload' %>
-<% end %>
-</div>

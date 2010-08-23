@@ -1,0 +1,23 @@
+%div{:class => "row light_border"}
+  %div{:class => "data light_border"}
+    = form.label :caption
+  %div{:class => "data light_border"}
+    = form.text_field :caption
+
+%div{:class => "row light_border"}
+  %div{:class => "data light_border"}
+    = form.label :scope
+  %div{:class => "data light_border"}
+    = select(:photo, "scope", {"public" => "public", "private" => "private"})
+
+%div{:class => "row light_border"}
+  %div{:class => "data light_border"}
+    = form.label :photo_path
+  %div{:class => "data light_border"}
+    = form.text_field :photo_path
+
+%div{:class => "row light_border"}
+  %div{:class => "data light_border"}
+    = form.label :tags
+  %div{:class => "data light_border"}
+    = form.text_area :tags
