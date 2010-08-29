@@ -1,0 +1,15 @@
+%table
+- @albums.each do |album|
+  %row
+    %data
+      Album Name
+    %data
+      = link_to(album.album_name, album_path(album.id))
+
+  %row
+    %data
+      Scope
+    %data
+      = album.scope
+
+=link_to "New Album", new_album_path

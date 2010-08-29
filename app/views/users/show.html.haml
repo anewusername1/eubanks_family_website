@@ -1,0 +1,14 @@
+%p
+  %b
+    Login:
+  =h @user.login
+ 
+%p
+  %b
+    Manage Albums
+  = link_to("Albums", albums_path)
+
+%p
+  =link_to "My Stats", my_stats_path
+  
+= link_to 'Edit', edit_account_path

@@ -1,0 +1,40 @@
+!!!
+ 
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+%head
+  %meta{:http-equiv => "content-type", :content => "text/html;charset=UTF-8"}
+  %title
+    = controller.controller_name 
+    :
+    = controller.action_name
+    
+	:javascript{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+	= stylesheet_link_tag "themes/smoothness/jquery-ui-1.8.custom.css"
+  = stylesheet_link_tag "application.css"
+	:javascript{:src => "/javascripts/jquery-ui-1.8.custom/js/jquery-ui-1.8.custom.min.js"}
+	- if protect_against_forgery?
+	  :javascript
+	      //<![CDATA[
+	        window._auth_token_name = "#{request_forgery_protection_token}";
+	        window._auth_token = "#{form_authenticity_token}";
+	    //]]>
+
+	= javascript_include_tag 'application'
+
+%body
+%ui-widget
+ 
+- if !current_user
+  = link_to "Register", new_account_path
+  |
+  = link_to "Log In", new_user_session_path 
+  |
+- else
+  = link_to "My Account", account_path %> 
+  |
+  = link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?"
+ 
+%p{:style => "color: green"}
+  = flash[:notice]
+ 
+= yield 

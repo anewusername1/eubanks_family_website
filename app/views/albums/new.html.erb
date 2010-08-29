@@ -1,8 +1,0 @@
-Create a new Album
-<div class="table">
-<% form_for :album, @album, :url => {:action => "create"} do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f %>
-  <%= f.submit 'Create' %>
-<% end %>
-</div>
