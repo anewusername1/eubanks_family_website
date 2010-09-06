@@ -1,6 +1,64 @@
 Upload a Photo
-%table
-  - form_for :photo, @photo, :url => {:action => "create"} do |f|
-    = f.error_messages 
-    = render :partial => "form", :object => f
-    = f.submit 'Upload'
+- dialog_file_description = 'Photos'
+- allowed_extensions = [:jpg, :jpeg, :gif, :png] 
+- max_size = 20.megabyte
+- allow_multiple_files = true
+- url = album_photos_path
+- photo_field = '#photo_photo'
+- session_key_name = ActionController::Base.session_options[:key]
+- content_for :jstemplates do
+  = javascript_tag "window._token = '#{form_authenticity_token}'"
+
+
+:javascript
+  var AUTH_TOKEN = '#{form_authenticity_token }';
+
+  $(document).ready(function() {
+
+    $('#{ photo_field }').uploadify({
+      uploader      : '/javascripts/uploadify/uploadify.swf',
+      script        : '#{ url }',
+      fileDataName  : $('#photo_uploader input:file')[0].name, // Extract correct name of upload field from form field
+      cancelImg     : '/images/cancel.png',
+      buttonText    : 'Browse',  
+      fileDesc      : '#{ dialog_file_description} (#{ allowed_extensions.collect { |ext| "*.#{ext}" }.join(';')})',
+      fileExt       : '#{ allowed_extensions.collect { |ext| "*.#{ext}" }.join(';')}',
+      sizeLimit     : #{ max_size},
+      'wmode'          : 'transparent',
+      'width'          : 130,
+      'queueID'        : 'fileQueue',
+      multi         : #{ allow_multiple_files},
+      onComplete    : function(event, queueID, fileObj, response, data) { var data = eval('(' + response + ')');$.getScript(data.image)},
+      onAllComplete : function(event, data){
+        $('#uploadify_cancel').hide('blind');
+        $('#uploadify_submit').show('blind');      
+      },
+      onSelect: function(event, queueID, fileObj){
+        if (fileObj.size > #{ max_size}) {
+          alert('The photo' + fileObj.name + ' is too large.')
+          return false;
+        }
+      },  
+      scriptData  : {
+          'format': 'json', 
+          '#{ session_key_name}' : encodeURIComponent('#{ u cookies[session_key_name]}'),
+          'authenticity_token'  : encodeURIComponent('#{ u form_authenticity_token if protect_against_forgery?}')
+      }    
+    });
+
+
+  });
+
+- form_for :photo, @photo, :url => "/albums/#{@album.id}/photos/new", :method => "POST", :html => { :multipart => true } do |form|
+  - if protect_against_forgery?
+    = form.hidden_field :authenticity_token, :value => (u form_authenticity_token)
+  
+  #photo_uploader
+    = form.file_field :photo
+  = form.error_messages
+  
+  = link_to "Upload Files", "javascript:$('#photo_photo').uploadifyUpload();"
+  |
+  = link_to "Clear Queue", "javascript:$('#photo_photo').uploadifyClearQueue();"
+  
+  #fileQueue{:style => "max-height: 600px; width: 350px; padding: 0pt; overflow: auto; margin-bottom: 10px;"}

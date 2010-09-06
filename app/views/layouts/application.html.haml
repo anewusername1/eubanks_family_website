@@ -2,39 +2,51 @@
  
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
 %head
-  %meta{:http-equiv => "content-type", :content => "text/html;charset=UTF-8"}
+  %meta{"http-equiv" => "content-type", :content => "text/html;charset=UTF-8"}
   %title
     = controller.controller_name 
-    :
+    \:
     = controller.action_name
-    
-	:javascript{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
-	= stylesheet_link_tag "themes/smoothness/jquery-ui-1.8.custom.css"
-  = stylesheet_link_tag "application.css"
-	:javascript{:src => "/javascripts/jquery-ui-1.8.custom/js/jquery-ui-1.8.custom.min.js"}
-	- if protect_against_forgery?
-	  :javascript
-	      //<![CDATA[
-	        window._auth_token_name = "#{request_forgery_protection_token}";
-	        window._auth_token = "#{form_authenticity_token}";
-	    //]]>
 
-	= javascript_include_tag 'application'
+  = javascript_include_tag "http://www.google.com/jsapi?key=ABQIAAAAAHB7IDPIr3rNgQKDNm6jIxTT1l-X5KrQDP4aXOS_qKtI3nAFxxR1kxnRjqr5CZomORtFdERrQACoow"
+  :javascript
+    google.load("jquery", "1.4.2");
+    google.load("jqueryui", "1.8.0");
+  - if RAILS_ENV == "development"
+    = javascript_include_tag "jquery.inspect.js"
+  = jqgrid_javascripts
+  = javascript_include_tag "uploadify/swfobject.js"
+  = javascript_include_tag "uploadify/jquery.uploadify.v2.1.0.js"
+  = jqgrid_stylesheets
+  = yield :script
+  = stylesheet_link_tag "reset-fonts-grids"
+  = stylesheet_link_tag "themes/efw/jquery-ui-1.8.4.custom.css"
+  = stylesheet_link_tag "application"
+  = yield :style
 
-%body
-%ui-widget
- 
-- if !current_user
-  = link_to "Register", new_account_path
-  |
-  = link_to "Log In", new_user_session_path 
-  |
-- else
-  = link_to "My Account", account_path %> 
-  |
-  = link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?"
- 
-%p{:style => "color: green"}
-  = flash[:notice]
- 
-= yield 
+  #doc3.yui-t8.ui-widget-content
+    #hd
+      %h1.ui-state-default{:style => "float: left;"} The Photo Album
+      = render :partial => "shared/main_navigation"
+    #bd
+      #yui-main
+        #main.yui-b
+          #breadcrumbs= render_crumbs
+          = navigation_for_namespace
+          #content.ui-corner-all
+            - if !current_user
+              = link_to "Register", new_account_path
+              |
+              = link_to "Log In", new_user_session_path 
+              |
+            - else
+              = link_to "My Account", account_path
+              |
+              = link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?"
+
+            %p{:style => "color: green"}
+              = flash[:notice]
+
+            = yield
+    #ft
+      .tiny Copyright &copy 2010 T. Eubanks. All Rights Reserved.
